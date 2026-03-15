@@ -1,10 +1,13 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="it" data-theme="light">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="/src/style.css" rel="stylesheet">
+
+  <title>slideshow - Landing Page</title>
+  <meta name="description" content="Landing page modernizzata di un sito obsoleto">
 </head>
 
 <body>
@@ -20,12 +23,12 @@
       <!-- Title Row -->
       <div class="navbar section-wrapper sticky top-0 z-30 bg-verde-chiaro backdrop-blur-md">
         <div class="container-1200 flex justify-between h-full items-center ">
-          <div
+          <h1
             class="flex-1 flex text-2xl font-bold text-verde-scuro truncate tracking-tight w-full lg:justify-center lg:text-5xl">
-            SLIDESHOW</div>
+            SLIDESHOW</h1>
           <div class="flex-none lg:hidden">
             <label for="my-drawer-2" aria-label="open sidebar" class="btn btn-square btn-ghost">
-              <img src="./icons/menu-hamburger.svg" alt="">
+              <img width="36" height="36" src="./icons/menu-hamburger.svg" alt="">
 
             </label>
           </div>
@@ -57,7 +60,7 @@
       <ul class="menu bg-verde-scuro min-h-full w-80 p-4 text-white ">
         <div class="flex w-full justify-end">
           <label for="my-drawer-2" aria-label="close sidebar">
-            <img src="./icons/cross.svg" alt="" aria-label="close sidebar">
+            <img width="48" height="48" src="./icons/cross.svg" alt="" aria-label="close sidebar">
           </label>
         </div>
 
@@ -77,13 +80,13 @@
       <div class="container-1200 px-25 my-25">
         <div class="carousel w-full">
           <div id="item1" class="carousel-item w-full aspect-4/3">
-            <img src="./img/times-square-horse.jpg" class="w-full aspect-auto object-cover rounded-25" />
+            <img width="960" height="380" src="./img/times-square-horse.webp" class="w-full aspect-auto object-cover rounded-25" alt="Polizia a cavallo a Times Square" fetchpriority="high"/>
           </div>
           <div id="item2" class="carousel-item w-full aspect-4/3">
-            <img src="./img/times-square-people.jpg" class="w-full aspect-auto object-cover rounded-25" />
+            <img width="960" height="380" src="./img/times-square-people.webp" class="w-full aspect-auto object-cover rounded-25" alt="Folla a Times Square" loading="lazy"/>
           </div>
           <div id="item3" class="carousel-item w-full aspect-4/3">
-            <img src="./img/times-square-traffic.jpg" class="w-full aspect-auto object-cover rounded-25" />
+            <img width="960" height="380" src="./img/times-square-traffic.webp" class="w-full aspect-auto object-cover rounded-25" alt="Traffico a timesquare" loading="lazy"/>
           </div>
         </div>
         <div class="layout-container gap-2 py-2">
@@ -147,7 +150,7 @@
 
             <div class="w-full lg:order-1 lg:row-span-2">
               <div class="overflow-hidden rounded-25 lg:aspect-square lg:aspect-[4/3]">
-                <img src="./img/times-square-traffic.jpg" alt="" class="w-full h-full object-cover">
+                <img width="960" height="380" src="./img/times-square-traffic.webp" alt="Traffico a Times Square" class="w-full h-full object-cover" loading="lazy">
               </div>
             </div>
 
@@ -184,7 +187,7 @@
 
             <div class="w-full lg:order-1 lg:row-span-2">
               <div class="overflow-hidden rounded-25 lg:aspect-square lg:aspect-[4/3]">
-                <img src="./img/times-square-traffic.jpg" alt="" class="w-full h-full object-cover">
+                <img width="960" height="380" src="./img/times-square-traffic.webp" alt="Traffico a Times Square" class="w-full h-full object-cover" loading="lazy">
               </div>
             </div>
 
@@ -220,7 +223,7 @@
     <section class="layout-container flex-col items-center bg-verde-scuro">
       <div class="container-1200 my-25 gap-25 flex flex-col items-center">
         <div class="layout-container py-25 border-b-4 border-b-beige-chiaro">
-          <img src="./icons/info.svg" alt="">
+          <img width="40" height="40" src="./icons/info.svg" alt="">
         </div>
         <div class="layout-container flex-col py-25 gap-25">
           <div class="info-card-title">INFO</div>
@@ -264,14 +267,14 @@
     </nav>
     <nav>
       <div class="grid grid-flow-col gap-4">
-        <a>
-          <img src="./icons/facebook.svg" alt="">
+        <a href="https://www.facebook.com/">
+          <img width="48" height="48" src="./icons/facebook.svg" alt="Facebook Link">
         </a>
-        <a>
-          <img src="./icons/linkedin.svg" alt="">
+        <a href="https://www.linkedin.com/">
+          <img width="48" height="48" src="./icons/linkedin.svg" alt="Linkedin Link">
         </a>
-        <a>
-          <img src="./icons/instagram.svg" alt="">
+        <a href="https://www.instagram.com/">
+          <img width="48" height="48" src="./icons/instagram.svg" alt="Instagram Link">
         </a>
       </div>
     </nav>
