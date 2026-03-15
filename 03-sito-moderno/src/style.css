@@ -1,0 +1,94 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('./assets/fonts/Inter-VariableFont_opsz,wght.ttf') format('truetype-variations');
+  font-weight: 100 900;
+  /* Questo permette di usare ogni spessore */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('./assets/fonts/Inter-Italic-VariableFont_opsz,wght.ttf') format('truetype-variations');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@import "tailwindcss";
+@plugin "daisyui";
+
+@theme {
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --width-personal: 1200px;
+
+  /* Colore: genererà text-primary, bg-primary, ecc. */
+  --color-verde-scuro: #41431B;
+  --color-verde-chiaro: #AEB784;
+  --color-nocciola: #E3DBBB;
+  --color-beige-chiaro: #F8F3E1;
+  --color-button-hover: #FFF8DB;
+
+  /* Spaziatura: genererà m-gap, p-gap, ecc. */
+  --spacing-gap: 25px;
+  --spacing-25: 25px;
+  --radius-25: 25px;
+}
+
+@layer components {
+  .btn-grid-link {
+    /* class="btn hover:bg-button-hover rounded-[25px] bg-beige-chiaro font-semibold aspect-4/2 h-auto text-[16px] py-[10px] hover:shadow-lg hover:shadow-[0px 0px 10px 0px #41431B] transition ease-in-out duration-300 border-none hover:border-none" */
+    @apply btn bg-beige-chiaro font-semibold h-auto py-[10px] aspect-4/2 text-[16px];
+    @apply rounded-[25px] border-none;
+    @apply hover:bg-button-hover hover:shadow-lg hover:shadow-[0px_0px_10px_0px_#41431B] hover:border-none;
+    @apply transition ease-in-out duration-300;
+    @apply lg:aspect-auto;
+  }
+
+  .active {
+    @apply !bg-verde-chiaro !text-verde-scuro !border-none !py-[5px];
+  }
+
+  .section-wrapper {
+    @apply w-full flex justify-center;
+  }
+
+  .container-1200 {
+    @apply w-full max-w-[1200px] px-25;
+  }
+
+  .layout-container {
+    @apply w-full flex justify-center;
+  }
+
+  .highlighted-card {
+    @apply rounded-25 bg-nocciola px-25 py-25;
+  }
+
+  .heading-primary{
+    @apply text-3xl font-bold text-verde-scuro
+  }
+
+  .article-content {
+    @apply leading-relaxed text-verde-scuro/90 line-clamp-10 text-lg;
+  }
+  
+  .info-card-title {
+    @apply text-3xl font-bold text-beige-chiaro flex justify-center;
+  }
+
+  .sidebar-desktop {
+    @apply lg:col-start-3 lg:col-end-3 lg:row-start-1 lg:row-end-3;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 300px;
+  box-shadow: 0px 0px 10px 0px #000000;
+}
