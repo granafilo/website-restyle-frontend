@@ -104,3 +104,11 @@ I difetti della versione legacy sono stati corretti seguendo le best practice at
 * **Attributi Alt Descrittivi:** Tutte le immagini strutturali e le icone di navigazione (es. l'hamburger menu) sono state dotate di attributi `alt` esplicativi o, dove necessario per la pura decorazione visiva, gestite tramite `aria-label` sui pulsanti interattivi.  
 * **Controllo della Lunghezza del Testo:** Per evitare che testi troppo lunghi distorcessero la geometria della Grid, è stata implementata la classe `line-clamp` (es. `line-clamp-10`), che tronca elegantemente il testo in eccesso garantendo altezze uniformi per i moduli informativi.
 
+## **6. Ottimizzazione delle Performance e SEO (Lighthouse)**
+
+La fase finale dello sviluppo si è concentrata sul raggiungimento di metriche ottimali sui Core Web Vitals, testate rigorosamente tramite Google Lighthouse in ambiente di produzione (compilato tramite Vite).
+
+* **Ottimizzazione degli Asset (Immagini):** Tutte le immagini sono state ridimensionate per il target mobile e convertite nel formato di nuova generazione **WebP**, riducendo drasticamente il peso del payload di rete. Per prevenire il *Cumulative Layout Shift (CLS)*, ogni tag `<img>` è stato dotato di attributi `width` e `height` espliciti.
+* **Priorità di Caricamento (LCP):** Per minimizzare i tempi del *Largest Contentful Paint*, all'immagine principale visibile *above-the-fold* è stato assegnato l'attributo `fetchpriority="high"`. Di contro, a tutte le immagini fuori schermo (negli articoli) è stato applicato il `loading="lazy"`.
+* **SEO e Indicizzazione:** Oltre all'uso di tag semantici, è stata aggiunta una corretta `<meta name="description">` e configurato il file `robots.txt` per istruire correttamente i crawler dei motori di ricerca.
+* **Build di Produzione:** Il codice finale è stato processato tramite il bundler di Vite (`npm run build`), che ha minificato il CSS (generando un file di soli ~12KB per l'intero sito), rimosso il codice JavaScript non utilizzato per l'Hot Module Replacement e ottimizzato le risorse bloccanti (Render-blocking resources).

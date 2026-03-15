@@ -19,6 +19,8 @@ Il progetto nasce dal refactoring di un layout legacy (basato su float e larghez
 * **Design System Custom:** Implementazione di un tema personalizzato tramite la direttiva `@theme` di Tailwind v4, estraendo spaziature, colori e border-radius in variabili globali.
 * **Componenti D.R.Y.:** Isolamento degli stili ricorrenti (card, bottoni, tipografia) nel `@layer components` del CSS, mantenendo il DOM pulito e scalabile.
 
+* **Performance & SEO Ottimizzate:** Punteggi Lighthouse massimizzati prestando attenzione ai Core Web Vitals. Compressione asset in formato WebP, prevenzione del CLS (tramite dimensioni esplicite), priorità di caricamento strategica (`fetchpriority` e `lazy loading`), file `robots.txt` per il crawling e minificazione spinta di CSS/JS tramite build di produzione.
+
 ## Installazione e Utilizzo (Local Development)
 
 Per far girare questo progetto in locale sul tuo computer, assicurati di avere [Node.js](https://nodejs.org/) installato.
