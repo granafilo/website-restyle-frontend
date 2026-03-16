@@ -49,5 +49,5 @@ Questo progetto è stato costruito per essere scalabile. Invece di abusare delle
 
 ## Autore
 
-Sviluppato da **Filippo Granata** come progetto di dimostrazione per il portfolio personale.
+Sviluppato da **Filippo Granata** come progetto scolastico.
 * **LinkedIn:** www.linkedin.com/in/filippo-granata04
