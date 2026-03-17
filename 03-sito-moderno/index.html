@@ -76,56 +76,48 @@
   <!-- main content -->
   <main>
     <!-- slider -->
-    <section class="layout-container">
-      <div class="container-1200 px-25 my-25">
-        <div class="carousel w-full">
-          <div id="item1" class="carousel-item w-full aspect-4/3">
-            <img width="960" height="380" src="./img/times-square-horse.webp" class="w-full aspect-auto object-cover rounded-25" alt="Polizia a cavallo a Times Square" fetchpriority="high"/>
-          </div>
-          <div id="item2" class="carousel-item w-full aspect-4/3">
-            <img width="960" height="380" src="./img/times-square-people.webp" class="w-full aspect-auto object-cover rounded-25" alt="Folla a Times Square" loading="lazy"/>
-          </div>
-          <div id="item3" class="carousel-item w-full aspect-4/3">
-            <img width="960" height="380" src="./img/times-square-traffic.webp" class="w-full aspect-auto object-cover rounded-25" alt="Traffico a timesquare" loading="lazy"/>
-          </div>
-        </div>
-        <div class="layout-container gap-2 py-2">
-          <a href="#item1" class="btn btn-xs">1</a>
-          <a href="#item2" class="btn btn-xs">2</a>
-          <a href="#item3" class="btn btn-xs">3</a>
-        </div>
+    <section class="section-wrapper">
+      <div class="max-h-[800px] section-wrapper py-25 object-fit">
+        <img class="w-full object-cover" src="./img/wallpaper.jpg" alt="">
       </div>
-
     </section>
 
     <!-- Highlighted content -->
-    <section class="layout-container bg-verde-chiaro">
+    <section class="section-wrapper bg-verde-chiaro">
 
       <div class="container-1200 py-25 my-25 gap-25 flex flex-col lg:flex-row">
-        <div class="highlighted-card">
+        <div class="highlighted-card hover:scale-[110%] transition-all shadow-xl/30 shadow-black-500/50">
           <div class="heading-primary">CONTENUTO IN EVIDENZA</div>
+          <div class="py-[15px] ">
+            <img class="rounded-[15px]" src="./img/times-square-traffic.webp" alt="">
+          </div>
           <div class="">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque maiores autem, deserunt omnis
             quod, quisquam animi quasi in atque illo consectetur rerum praesentium sapiente ullam?</div>
 
         </div>
-        <div class="highlighted-card">
+        <div class="highlighted-card hover:scale-[110%] transition-all shadow-xl/30 shadow-black-500/50">
           <div class="heading-primary">CONTENUTO IN EVIDENZA</div>
+          <div class="py-[15px] ">
+            <img class="rounded-[15px]" src="./img/times-square-traffic.webp" alt="">
+          </div>
+          <div class="">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque maiores autem, deserunt omnis
+            quod, quisquam animi quasi in atque illo consectetur rerum praesentium sapiente ullam?</div>
+        </div>
+        <div class="highlighted-card hover:scale-[110%]  transition-all shadow-xl/30 shadow-black-500/50">
+          <div class="heading-primary">CONTENUTO IN EVIDENZA</div>
+          <div class="py-[15px] ">
+            <img class="rounded-[15px]" src="./img/times-square-traffic.webp" alt="">
+          </div>
           <div class="">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque maiores autem, deserunt omnis
             quod, quisquam animi quasi in atque illo consectetur rerum praesentium sapiente ullam?</div>
 
         </div>
-        <div class="highlighted-card">
-          <div class="heading-primary">CONTENUTO IN EVIDENZA</div>
-          <div class="">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque maiores autem, deserunt omnis
-            quod, quisquam animi quasi in atque illo consectetur rerum praesentium sapiente ullam?</div>
-        </div>
-      </div>
 
     </section>
 
 
     <!-- full width msg -->
-    <section class="layout-container">
+    <section class="section-wrapper">
       <div class="container-1200 py-25 my-25">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. At quis numquam quas repudiandae eveniet quisquam
         veniam dolore commodi ex consequatur? Esse blanditiis quod quo dolorem temporibus officiis debitis commodi
@@ -135,14 +127,13 @@
     </section>
 
 
-    <section class="layout-container py-25 lg:bg-verde-chiaro">
+    <section class="section-wrapper py-25 lg:bg-verde-chiaro">
       <!-- wrapper articoli e sidebar -->
-      <div
-        class="container-1200 justify-center grid grid-cols-1 lg:grid-cols-3 lg:grid-rows-[repeat(1fr,2)] lg:gap-y-25">
+      <div class="container-1200 !px-0  justify-center grid grid-cols-1 lg:grid-cols-3  lg:gap-25">
         <!-- articolo 1 -->
-        <div class="layout-container bg-verde-chiaro lg:col-start-1 lg:col-end-3 lg:row-start-1 lg:row-end-1">
+        <div class="section-wrapper bg-verde-chiaro lg:col-start-1 lg:col-end-3 lg:row-start-1 lg:row-end-1">
           <div
-            class="w-full px-25 py-25 gap-25 flex flex-col  lg:grid lg:grid-cols-[350px_1fr] lg:items-start lg:gap-x-[40px]">
+            class="w-full px-25 lg:px-0 py-25 lg:py-0 gap-25 flex flex-col lg:grid lg:grid-cols-[350px_1fr] lg:items-start lg:gap-x-[40px]">
 
             <div class="lg:order-2 heading-primary">
               TITOLO ARTICOLO
@@ -150,7 +141,8 @@
 
             <div class="w-full lg:order-1 lg:row-span-2">
               <div class="overflow-hidden rounded-25 lg:aspect-square lg:aspect-[4/3]">
-                <img width="960" height="380" src="./img/times-square-traffic.webp" alt="Traffico a Times Square" class="w-full h-full object-cover" loading="lazy">
+                <img width="960" height="380" src="./img/times-square-traffic.webp" alt="Traffico a Times Square"
+                  class="w-full h-full object-cover" loading="lazy">
               </div>
             </div>
 
@@ -176,33 +168,9 @@
 
         </div>
 
-        <!-- articolo 2 -->
-        <div class="layout-container bg-verde-chiaro lg:col-start-1 lg:col-end-3 lg:row-start-2 lg:row-end-2">
-          <div
-            class="w-full px-25 py-25 gap-25 flex flex-col lg:grid lg:grid-cols-[350px_1fr] lg:items-start lg:gap-x-[40px]">
-
-            <div class="lg:order-2 heading-primary">
-              TITOLO ARTICOLO
-            </div>
-
-            <div class="w-full lg:order-1 lg:row-span-2">
-              <div class="overflow-hidden rounded-25 lg:aspect-square lg:aspect-[4/3]">
-                <img width="960" height="380" src="./img/times-square-traffic.webp" alt="Traffico a Times Square" class="w-full h-full object-cover" loading="lazy">
-              </div>
-            </div>
-
-            <div class="article-content lg:order-3">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium labore veniam omnis autem optio
-              corporis a porro, minus necessitatibus eius, sint repudiandae hic ratione accusamus, repellendus voluptate
-              consequuntur architecto sed laboriosam cum!
-            </div>
-          </div>
-
-        </div>
-
         <!-- sidebar -->
-        <div class="layout-container sidebar-desktop flex-col items-center">
-          <div class="w-full px-25 my-25 gap-25 flex flex-col items-center lg:h-full">
+        <div class="section-wrapper sidebar-desktop flex-col items-center">
+          <div class="w-full px-25 lg:px-0  my-25 lg:my-0 gap-25 flex flex-col items-center lg:h-full">
             <div class="heading-primary">LINK SECTION</div>
 
             <div class="w-full grid grid-cols-[repeat(auto-fit,_minmax(120px,_1fr))] gap-[10px] lg:grid-cols-1 ">
@@ -220,12 +188,12 @@
     </section>
 
     <!-- info section -->
-    <section class="layout-container flex-col items-center bg-verde-scuro">
+    <section class="section-wrapper flex-col items-center bg-verde-scuro">
       <div class="container-1200 my-25 gap-25 flex flex-col items-center">
-        <div class="layout-container py-25 border-b-4 border-b-beige-chiaro">
+        <div class="section-wrapper py-25 border-b-4 border-b-beige-chiaro">
           <img width="40" height="40" src="./icons/info.svg" alt="">
         </div>
-        <div class="layout-container flex-col py-25 gap-25">
+        <div class="section-wrapper flex-col py-25 gap-25">
           <div class="info-card-title">INFO</div>
           <div class="text-beige-chiaro ">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, voluptatibus obcaecati odit fuga placeat
@@ -234,7 +202,7 @@
             placeat temporibus iure quod culpa laboriosam, vero facilis.
           </div>
         </div>
-        <div class="layout-container flex-col py-25 gap-25">
+        <div class="section-wrapper flex-col py-25 gap-25">
           <div class="info-card-title">INFO</div>
           <div class="text-beige-chiaro ">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, voluptatibus obcaecati odit fuga placeat
@@ -243,7 +211,7 @@
             placeat temporibus iure quod culpa laboriosam, vero facilis.
           </div>
         </div>
-        <div class="layout-container flex-col py-25 gap-25">
+        <div class="section-wrapper flex-col py-25 gap-25">
           <div class="info-card-title">INFO</div>
           <div class="text-beige-chiaro ">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, voluptatibus obcaecati odit fuga placeat
@@ -267,13 +235,13 @@
     </nav>
     <nav>
       <div class="grid grid-flow-col gap-4">
-        <a href="https://www.facebook.com/">
+        <a target="_blank" href="https://www.facebook.com/">
           <img width="48" height="48" src="./icons/facebook.svg" alt="Facebook Link">
         </a>
-        <a href="https://www.linkedin.com/">
+        <a target="_blank" href="https://www.linkedin.com/">
           <img width="48" height="48" src="./icons/linkedin.svg" alt="Linkedin Link">
         </a>
-        <a href="https://www.instagram.com/">
+        <a target="_blank" href="https://www.instagram.com/">
           <img width="48" height="48" src="./icons/instagram.svg" alt="Instagram Link">
         </a>
       </div>
