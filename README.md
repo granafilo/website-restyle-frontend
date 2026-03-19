@@ -14,7 +14,7 @@ Il progetto nasce dal refactoring di un layout legacy (basato su float e larghez
 ## Funzionalità Principali
 
 * **100% Responsive:** Layout fluido che si adatta a qualsiasi dispositivo (Mobile, Tablet, Desktop).
-* **Zero JavaScript per l'UI:** Elementi interattivi complessi come il Drawer (menu laterale off-canvas) e il Carousel (slider) sono gestiti esclusivamente tramite HTML e CSS grazie a DaisyUI, garantendo zero render-blocking e massima velocità.
+* **Zero JavaScript per l'UI:** Elementi interattivi complessi come il Drawer (menu laterale off-canvas) sono gestiti esclusivamente tramite HTML e CSS grazie a DaisyUI, garantendo zero render-blocking e massima velocità.
 * **Layout Asimmetrico Avanzato:** Utilizzo combinato di CSS Grid e Flexbox per gestire il reflow dei contenuti (es. inversione dell'ordine tra immagine e titolo su dispositivi mobili rispetto al desktop) senza duplicare l'HTML.
 * **Design System Custom:** Implementazione di un tema personalizzato tramite la direttiva `@theme` di Tailwind v4, estraendo spaziature, colori e border-radius in variabili globali.
 * **Componenti D.R.Y.:** Isolamento degli stili ricorrenti (card, bottoni, tipografia) nel `@layer components` del CSS, mantenendo il DOM pulito e scalabile.

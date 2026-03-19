@@ -11,63 +11,63 @@
 </head>
 
 <body>
-
   <!-- header -->
-  <header class="drawer drawer-end sticky top-0">
-    <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
+  <header class="drawer drawer-end sticky top-0 border-b border-text/30">
+    <input id="sidebar" type="checkbox" class="drawer-toggle" />
 
     <!-- Navbar -->
     <div class="drawer-content flex flex-col">
 
+      <div class="navbar section-wrapper w-full p-25 bg-white/60 backdrop-blur-md">
 
-      <!-- Title Row -->
-      <div class="navbar section-wrapper sticky top-0 z-30 bg-verde-chiaro backdrop-blur-md">
-        <div class="container-1200 flex justify-between h-full items-center ">
-          <h1
-            class="flex-1 flex text-2xl font-bold text-verde-scuro truncate tracking-tight w-full lg:justify-center lg:text-5xl">
-            SLIDESHOW</h1>
-          <div class="flex-none lg:hidden">
-            <label for="my-drawer-2" aria-label="open sidebar" class="btn btn-square btn-ghost">
+        <div class="flex justify-between items-center w-full h-full">
+
+          <div class="flex-1 w-full">
+            <h1 class="navbar-title">
+              SLIDESHOW</h1>
+          </div>
+
+          <div class="flex-none md:hidden">
+            <label for="sidebar" aria-label="open sidebar" class="utility-btn">
               <img width="36" height="36" src="./icons/menu-hamburger.svg" alt="">
-
             </label>
+          </div>
+
+          <div class="hidden md:flex justify-center items-center ">
+            <div class="container-1200 px-0 items-center gap-25 flex ">
+              <div class="navbar-btn">
+                HOME
+              </div>
+              <div class="navbar-btn">
+                ABOUT
+              </div>
+              <div class="navbar-btn">
+                CONTACT
+              </div>
+            </div>
+
           </div>
         </div>
 
       </div>
 
-      <!-- navbar orizzontale -->
-      <div class="hidden lg:flex justify-center w-full bg-white items-center border-b border-verde-scuro/10">
-        <div class="container-1200 py-25 items-center gap-25  grid grid-cols-3 ">
-          <div
-            class="active flex justify-center btn bg-beige-chiaro rounded-25 text-[24px] hover:shadow hover:shadow-[0px_0px_10px_0px_#000000]">
-            HOME</div>
-          <div
-            class="flex justify-center btn bg-beige-chiaro rounded-25 text-[24px] hover:shadow hover:shadow-[0px_0px_10px_0px_#000000]">
-            ABOUT</div>
-          <div
-            class="flex justify-center btn bg-beige-chiaro rounded-25 text-[24px] hover:shadow hover:shadow-[0px_0px_10px_0px_#000000]">
-            CONTACT</div>
-        </div>
-
-      </div>
     </div>
 
     <!-- sidebar verticale -->
     <div class="drawer-side z-50">
-      <label for="my-drawer-2" aria-label="close sidebar" class="drawer-overlay"></label>
+      <label for="sidebar" aria-label="close sidebar" class="drawer-overlay"></label>
 
-      <ul class="menu bg-verde-scuro min-h-full w-80 p-4 text-white ">
+      <ul class="menu bg-bg min-h-full w-80 p-4 text-white gap-25">
         <div class="flex w-full justify-end">
-          <label for="my-drawer-2" aria-label="close sidebar">
-            <img width="48" height="48" src="./icons/cross.svg" alt="" aria-label="close sidebar">
+          <label for="sidebar" aria-label="close sidebar" class="utility-btn">
+            <img width="36" height="36" src="./icons/cross.svg" alt="" aria-label="close sidebar">
           </label>
         </div>
 
         <!-- Sidebar content here -->
-        <li><a class="text-[24px] font-bold">Home</a></li>
-        <li><a class="text-[24px] font-bold"> About</a></li>
-        <li><a class="text-[24px] font-bold">Contact</a></li>
+        <li><a class="sidebar-btn">Home</a></li>
+        <li><a class="sidebar-btn"> About</a></li>
+        <li><a class="sidebar-btn">Contact</a></li>
 
       </ul>
     </div>
@@ -76,64 +76,119 @@
   <!-- main content -->
   <main>
     <!-- slider -->
-    <section class="section-wrapper">
-      <div class="max-h-[800px] section-wrapper py-25 object-fit">
+    <section class="section-wrapper border-b border-b-text/10">
+      <div class="max-h-200 section-wrapper py-25 object-fit">
         <img class="w-full object-cover" src="./img/wallpaper.jpg" alt="">
       </div>
     </section>
 
     <!-- Highlighted content -->
-    <section class="section-wrapper bg-verde-chiaro">
+    <section class="section-wrapper bg-bg border-b border-b-text/10">
 
-      <div class="container-1200 py-25 my-25 gap-25 flex flex-col lg:flex-row">
-        <div class="highlighted-card hover:scale-[110%] transition-all shadow-xl/30 shadow-black-500/50">
-          <div class="heading-primary">CONTENUTO IN EVIDENZA</div>
-          <div class="py-[15px] ">
-            <img class="rounded-[15px]" src="./img/times-square-traffic.webp" alt="">
+      <div
+        class="container-1200 py-25 my-25 gap-25 grid grid-cols-1 2xl:grid-cols-[repeat(auto-fit,minmax(400px,1fr))]">
+        <!-- hightlighted card -->
+        <article class="section-wrapper flex-col bg-surface p-25 rounded-25 gap-25">
+          <div class="max-h-70">
+            <img class="object-cover w-full h-50" src="/img/wallpaper.jpg" alt="" loading="lazy">
           </div>
-          <div class="">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque maiores autem, deserunt omnis
-            quod, quisquam animi quasi in atque illo consectetur rerum praesentium sapiente ullam?</div>
+          <div class="heading-primary">CONTENUTO IN EVIDENZA</div>
+          <div class="line-clamp-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis aspernatur,
+            tempore odit dignissimos aliquam at dolorum inventore modi, sit vero dolores quos? Ex tenetur accusamus
+            velit
+            culpa officiis vero unde provident! At repudiandae magni nulla ea architecto, asperiores ad ipsa unde
+            debitis
+            doloribus quas tenetur maxime, rerum voluptate ipsum minima?</div>
+          <div class="btn bg-text text-surface rounded-full h-auto p-15">
+            SHOW CONTENT
+          </div>
+        </article>
 
-        </div>
-        <div class="highlighted-card hover:scale-[110%] transition-all shadow-xl/30 shadow-black-500/50">
-          <div class="heading-primary">CONTENUTO IN EVIDENZA</div>
-          <div class="py-[15px] ">
-            <img class="rounded-[15px]" src="./img/times-square-traffic.webp" alt="">
+        <!-- hightlighted card -->
+        <article class="section-wrapper flex-col bg-surface p-25 rounded-25 gap-25">
+          <div class="max-h-70">
+            <img class="object-cover w-full h-50" src="/img/wallpaper.jpg" alt="" loading="lazy">
           </div>
-          <div class="">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque maiores autem, deserunt omnis
-            quod, quisquam animi quasi in atque illo consectetur rerum praesentium sapiente ullam?</div>
-        </div>
-        <div class="highlighted-card hover:scale-[110%]  transition-all shadow-xl/30 shadow-black-500/50">
           <div class="heading-primary">CONTENUTO IN EVIDENZA</div>
-          <div class="py-[15px] ">
-            <img class="rounded-[15px]" src="./img/times-square-traffic.webp" alt="">
+          <div class="line-clamp-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis aspernatur,
+            tempore odit dignissimos aliquam at dolorum inventore modi, sit vero dolores quos? Ex tenetur accusamus
+            velit
+            culpa officiis vero unde provident! At repudiandae magni nulla ea architecto, asperiores ad ipsa unde
+            debitis
+            doloribus quas tenetur maxime, rerum voluptate ipsum minima?</div>
+          <div class="btn bg-text text-surface rounded-full h-auto p-15">
+            SHOW CONTENT
           </div>
-          <div class="">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque maiores autem, deserunt omnis
-            quod, quisquam animi quasi in atque illo consectetur rerum praesentium sapiente ullam?</div>
+        </article>
 
-        </div>
+
+        <!-- hightlighted card -->
+        <article class="section-wrapper flex-col bg-surface p-25 rounded-25 gap-25">
+          <div class="max-h-70">
+            <img class="object-cover w-full h-50" src="/img/wallpaper.jpg" alt="" loading="lazy">
+          </div>
+          <div class="heading-primary">CONTENUTO IN EVIDENZA</div>
+          <div class="line-clamp-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis aspernatur,
+            tempore odit dignissimos aliquam at dolorum inventore modi, sit vero dolores quos? Ex tenetur accusamus
+            velit
+            culpa officiis vero unde provident! At repudiandae magni nulla ea architecto, asperiores ad ipsa unde
+            debitis
+            doloribus quas tenetur maxime, rerum voluptate ipsum minima?</div>
+          <div class="btn bg-text text-surface rounded-full h-auto p-15">
+            SHOW CONTENT
+          </div>
+        </article>
+
+
 
     </section>
 
 
     <!-- full width msg -->
-    <section class="section-wrapper">
-      <div class="container-1200 py-25 my-25">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. At quis numquam quas repudiandae eveniet quisquam
-        veniam dolore commodi ex consequatur? Esse blanditiis quod quo dolorem temporibus officiis debitis commodi
-        aliquid, incidunt eveniet itaque. Quidem ex, at perspiciatis atque iusto possimus saepe? Natus facere itaque
-        iusto deserunt distinctio necessitatibus culpa sapiente.
+    <section class="section-wrapper border-b border-b-text/10">
+      <div class="container-1200 max-w-none py-25 my-25 text-center text-5xl">
+        FULL WIDTH MSG
       </div>
     </section>
 
-
-    <section class="section-wrapper py-25 lg:bg-verde-chiaro">
+    <!-- sezione articoli e link sidebar -->
+    <section class="section-wrapper py-12.5 bg-bg">
       <!-- wrapper articoli e sidebar -->
-      <div class="container-1200 !px-0  justify-center grid grid-cols-1 lg:grid-cols-3  lg:gap-25">
+      <div class="container-1200 flex flex-col justify-center gap-25">
+
+        <article class="section-wrapper flex-col bg-surface p-25 rounded-25 gap-25">
+          <div class="max-h-70">
+            <img class="object-cover w-full h-50" src="/img/wallpaper.jpg" alt="" loading="lazy">
+          </div>
+          <div class="heading-primary">TITOLO ARTICOLO</div>
+          <div class="line-clamp-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis aspernatur,
+            tempore odit dignissimos aliquam at dolorum inventore modi, sit vero dolores quos? Ex tenetur accusamus
+            velit culpa officiis vero unde provident! At repudiandae magni nulla ea architecto, asperiores ad ipsa unde
+            debitis doloribus quas tenetur maxime, rerum voluptate ipsum minima?</div>
+          <div class="btn bg-text text-surface rounded-full h-auto p-15">
+            Read Article
+          </div>
+        </article>
+
+        <article class="section-wrapper flex-col bg-surface p-25 rounded-25 gap-25">
+          <div class="max-h-70">
+            <img class="object-cover w-full h-50" src="/img/wallpaper.jpg" alt="" loading="lazy">
+          </div>
+          <div class="heading-primary">TITOLO ARTICOLO</div>
+          <div class="line-clamp-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis aspernatur,
+            tempore odit dignissimos aliquam at dolorum inventore modi, sit vero dolores quos? Ex tenetur accusamus
+            velit culpa officiis vero unde provident! At repudiandae magni nulla ea architecto, asperiores ad ipsa unde
+            debitis doloribus quas tenetur maxime, rerum voluptate ipsum minima?</div>
+          <div class="btn bg-text text-surface rounded-full h-auto p-15">
+            Read Article
+          </div>
+        </article>
+
         <!-- articolo 1 -->
-        <div class="section-wrapper bg-verde-chiaro lg:col-start-1 lg:col-end-3 lg:row-start-1 lg:row-end-1">
-          <div
-            class="w-full px-25 lg:px-0 py-25 lg:py-0 gap-25 flex flex-col lg:grid lg:grid-cols-[350px_1fr] lg:items-start lg:gap-x-[40px]">
+
+        <!-- 
+        <div class="section-wrapper bg-surface p-25 rounded-25 lg:col-start-1 lg:col-end-3 lg:row-start-1 lg:row-end-1">
+          <div class="w-full  gap-25 flex flex-col lg:grid lg:grid-cols-[350px_1fr] lg:items-start lg:gap-x-[40px]">
 
             <div class="lg:order-2 heading-primary">
               TITOLO ARTICOLO
@@ -166,14 +221,14 @@
             </div>
           </div>
 
-        </div>
+        </div> -->
 
         <!-- sidebar -->
-        <div class="section-wrapper sidebar-desktop flex-col items-center">
-          <div class="w-full px-25 lg:px-0  my-25 lg:my-0 gap-25 flex flex-col items-center lg:h-full">
+        <!-- <div class="section-wrapper sidebar-desktop flex-col justify-start items-center">
+          <div class="w-full px-25 lg:px-0 py-25 lg:my-0 gap-25 flex flex-col lg:h-full md:items-center">
             <div class="heading-primary">LINK SECTION</div>
 
-            <div class="w-full grid grid-cols-[repeat(auto-fit,_minmax(120px,_1fr))] gap-[10px] lg:grid-cols-1 ">
+            <div class="w-full grid grid-cols-[repeat(auto-fit,minmax(120px,1fr))] gap-10 lg:grid-cols-1">
               <div class="btn-grid-link">MY LINK</div>
               <div class="btn-grid-link">MY LINK</div>
               <div class="btn-grid-link">MY LINK</div>
@@ -182,7 +237,7 @@
               <div class="btn-grid-link">MY LINK</div>
             </div>
           </div>
-        </div>
+        </div> -->
 
       </div>
     </section>
