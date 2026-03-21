@@ -7,6 +7,14 @@
   font-display: swap;
 }
 
+
+.kaushan-script-regular {
+  font-family: "Kaushan Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 @import "tailwindcss";
 
 @plugin "daisyui" {
@@ -39,9 +47,9 @@
   --color-button-hover: #FFF8DB;
 
   /* --color-primary: #2563EB; */
-  --color-primary-light: #BDE0FE;
+  --color-primary-light: #c8e0f5;
   --color-bg: #e2e2e2;
-  --color-surface: #FFFFFF;
+  --color-surface: #FAFAFA;
   --color-text: #0F172A;
   --color-text-muted: #64748B;
   --color-border: #E2E8F0;
@@ -64,12 +72,14 @@
   --text-25: 25px;
 }
 
+
+
 test {
   --color-primary: #2563EB;
-  --color-primary-light: #BDE0FE;
+  --color-primary-light: #c8e0f5;
   --color-secondary: #3B82F6;
   --color-bg: #e2e2e2;
-  --color-surface: #FFFFFF;
+  --color-surface: #FAFAFA;
   --color-text: #0F172A;
   --color-text-muted: #64748B;
   --color-border: #E2E8F0;
@@ -94,17 +104,17 @@ test {
     /* flex text-4xl font-bold text-text truncate tracking-tight w-full lg:justify-center lg:text-6xl */
     @apply flex lg:justify-start ;
     @apply w-full;
-    @apply text-text font-bold text-4xl md:text-5xl lg:text-6xl truncate; 
+    @apply text-text font-bold text-2xl  truncate; 
   }
 
   .navbar-btn{
     /* flex justify-center btn bg-primary hover:bg-primary-light py-10 h-auto rounded-full text-[24px] hover:border-none hover:shadow-[0px_0px_10px_0px_#000000] text-text duration-300 */
-    @apply btn btn-ghost bg-primary-light;
+    @apply btn btn-ghost bg-text;
     @apply flex justify-center;
     @apply py-10  px-20  h-auto rounded-full;
-    @apply text-[20px]  text-text;
-    @apply  hover:border-primary hover:shadow-[0px_0px_10px_0px_#2563EB];
+    @apply text-sm text-surface;
     @apply duration-300;
+    @apply hover:border hover:border-primary hover:shadow-[0px_0px_10px_0px_#2563EB];
   }
 
   .utility-btn{
@@ -120,9 +130,11 @@ test {
 
   .sidebar-btn{
     /* btn btn-ghost rounded-full text-25 text-text font-bold */
-    @apply btn  rounded-full! py-5 h-auto;
-    @apply text-25 text-text font-bold;
-    @apply hover:bg-primary-light! hover:border-primary hover:shadow-[0px_0px_10px_0px_#2563EB]!;
+    @apply btn btn-ghost rounded-full! py-5 h-auto;
+    @apply bg-text;
+    @apply text-25 text-surface font-bold;
+    @apply hover:border hover:border-primary hover:shadow-[0px_0px_10px_0px_#2563EB]!;
+    @apply hover:bg-text!;
     @apply duration-300;
   }
 
@@ -143,6 +155,14 @@ test {
     @apply bg-surface;
   }
 
+  .show-content-btn{
+    @apply btn;
+    @apply bg-text text-surface;
+    @apply h-auto p-15 rounded-full;
+    @apply hover:border hover:border-primary hover:shadow-[0px_0px_10px_0px_#2563EB];
+    @apply duration-300;
+  }
+
   .heading-primary {
     @apply text-3xl font-bold text-text
   }
@@ -157,6 +177,26 @@ test {
 
   .sidebar-desktop {
     @apply lg:col-start-3 lg:col-end-3 lg:row-start-1 lg:row-end-3;
+  }
+
+  .link-btn{
+    @apply btn btn-ghost;
+    @apply w-full h-auto px-15 py-10 rounded-full!;
+    @apply text-surface text-[20px];
+    @apply hover:border hover:border-primary hover:shadow-[0px_0px_30px_0px_#2563EB];
+    @apply duration-500;
+  }
+
+  .background-gradient{
+    background-image: linear-gradient( 90.6deg,  rgba(251,229,210,1) 18.9%, rgba(217,240,235,1) 39.5%, rgba(208,239,238,1) 51.1%, rgba(219,242,240,1) 62.1%, rgba(233,240,217,1) 84.1% );
+  }
+
+  .gradient-btn{
+    background-image: radial-gradient( circle farthest-corner at 17.6% 50.7%, #0F172A  0%, rgb(54, 54, 54) 90% );
+  }
+
+  .link-hover{
+    @apply hover:text-[#4e406d];
   }
 }
 

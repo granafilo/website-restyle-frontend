@@ -8,17 +8,21 @@
 
   <title>slideshow - Landing Page</title>
   <meta name="description" content="Landing page modernizzata di un sito obsoleto">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <!-- header -->
-  <header class="drawer drawer-end sticky top-0 border-b border-text/30">
+  <header class="fixed top-25 drawer drawer-end z-100">
     <input id="sidebar" type="checkbox" class="drawer-toggle" />
 
     <!-- Navbar -->
-    <div class="drawer-content flex flex-col">
+    <div class="drawer-content flex flex-col items-center px-25">
 
-      <div class="navbar section-wrapper w-full p-25 bg-white/60 backdrop-blur-md">
+      <div class="navbar section-wrapper w-full px-25 py-5 bg-white/60 backdrop-blur-md rounded-full max-w-[1600px]">
 
         <div class="flex justify-between items-center w-full h-full">
 
@@ -57,7 +61,7 @@
     <div class="drawer-side z-50">
       <label for="sidebar" aria-label="close sidebar" class="drawer-overlay"></label>
 
-      <ul class="menu bg-bg min-h-full w-80 p-4 text-white gap-25">
+      <ul class="menu bg-surface min-h-full w-80 p-4 text-white gap-25">
         <div class="flex w-full justify-end">
           <label for="sidebar" aria-label="close sidebar" class="utility-btn">
             <img width="36" height="36" src="./icons/cross.svg" alt="" aria-label="close sidebar">
@@ -77,67 +81,88 @@
   <main>
     <!-- slider -->
     <section class="section-wrapper border-b border-b-text/10">
-      <div class="max-h-200 section-wrapper py-25 object-fit">
+      <div class="max-h-[75vh] section-wrapper object-fit">
         <img class="w-full object-cover" src="./img/wallpaper.jpg" alt="">
       </div>
     </section>
 
     <!-- Highlighted content -->
-    <section class="section-wrapper bg-bg border-b border-b-text/10">
+    <section class="section-wrapper  bg-surface border-b border-b-text/10">
 
       <div
-        class="container-1200 py-25 my-25 gap-25 grid grid-cols-1 2xl:grid-cols-[repeat(auto-fit,minmax(400px,1fr))]">
+        class="max-w-400 container-1200 py-25 my-25 gap-25 grid grid-cols-1 2xl:grid-cols-[repeat(auto-fit,minmax(400px,1fr))]">
+
         <!-- hightlighted card -->
-        <article class="section-wrapper flex-col bg-surface p-25 rounded-25 gap-25">
-          <div class="max-h-70">
-            <img class="object-cover w-full h-50" src="/img/wallpaper.jpg" alt="" loading="lazy">
+        <article
+          class="section-wrapper hover:-translate-y-2 group w-auto flex-col bg-surface  rounded-25 gap-25 shadow-[0px_0px_20px_-13px_#000000] duration-300">
+          <div class="overflow-hidden h-full self-stretch shrink rounded-t-25">
+            <img class="object-cover w-full h-auto xl:h-full rounded-t-25 group-hover:scale-110 duration-500" src="/img/thumbnail1.jpg" alt=""
+              loading="lazy">
           </div>
-          <div class="heading-primary">CONTENUTO IN EVIDENZA</div>
-          <div class="line-clamp-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis aspernatur,
-            tempore odit dignissimos aliquam at dolorum inventore modi, sit vero dolores quos? Ex tenetur accusamus
-            velit
-            culpa officiis vero unde provident! At repudiandae magni nulla ea architecto, asperiores ad ipsa unde
-            debitis
-            doloribus quas tenetur maxime, rerum voluptate ipsum minima?</div>
-          <div class="btn bg-text text-surface rounded-full h-auto p-15">
-            SHOW CONTENT
+          <div class="flex flex-col p-25 gap-25 justify-between h-full">
+            <div class="flex flex-col gap-25">
+              <div class="heading-primary">CONTENUTO IN EVIDENZA</div>
+              <div class="line-clamp-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
+                aspernatur,
+                tempore odit dignissimos aliquam at dolorum inventore modi, sit vero dolores quos? Ex tenetur accusamus
+                velit
+                culpa officiis vero unde provident! At repudiandae magni nulla ea architecto, asperiores ad ipsa unde
+                debitis
+                doloribus quas tenetur maxime, rerum voluptate ipsum minima?</div>
+            </div>
+            <div class="show-content-btn">
+              SHOW CONTENT
+            </div>
           </div>
         </article>
 
         <!-- hightlighted card -->
-        <article class="section-wrapper flex-col bg-surface p-25 rounded-25 gap-25">
-          <div class="max-h-70">
-            <img class="object-cover w-full h-50" src="/img/wallpaper.jpg" alt="" loading="lazy">
+        <article
+          class="section-wrapper hover:-translate-y-2 group w-auto flex-col bg-surface  rounded-25 gap-25 shadow-[0px_0px_20px_-13px_#000000] duration-300">
+          <div class="overflow-hidden h-full self-stretch shrink rounded-t-25">
+            <img class="object-cover w-full h-auto xl:h-full rounded-t-25 group-hover:scale-110 duration-500" src="/img/thumbnail2.jpg" alt=""
+              loading="lazy">
           </div>
-          <div class="heading-primary">CONTENUTO IN EVIDENZA</div>
-          <div class="line-clamp-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis aspernatur,
-            tempore odit dignissimos aliquam at dolorum inventore modi, sit vero dolores quos? Ex tenetur accusamus
-            velit
-            culpa officiis vero unde provident! At repudiandae magni nulla ea architecto, asperiores ad ipsa unde
-            debitis
-            doloribus quas tenetur maxime, rerum voluptate ipsum minima?</div>
-          <div class="btn bg-text text-surface rounded-full h-auto p-15">
-            SHOW CONTENT
-          </div>
+          <div class="flex flex-col p-25 gap-25 justify-between h-full">
+            <div class="flex flex-col gap-25">
+              <div class="heading-primary">CONTENUTO IN EVIDENZA</div>
+              <div class="line-clamp-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
+                aspernatur,
+                tempore odit dignissimos aliquam at dolorum inventore modi, sit vero dolores quos? Ex tenetur accusamus
+                velit
+                culpa officiis vero unde provident! At repudiandae magni nulla ea architecto, asperiores ad ipsa unde
+                debitis
+                doloribus quas tenetur maxime, rerum voluptate ipsum minima?</div>
+            </div>
+            <div class="show-content-btn">
+              SHOW CONTENT
+            </div>
         </article>
-
 
         <!-- hightlighted card -->
-        <article class="section-wrapper flex-col bg-surface p-25 rounded-25 gap-25">
-          <div class="max-h-70">
-            <img class="object-cover w-full h-50" src="/img/wallpaper.jpg" alt="" loading="lazy">
+        <article
+          class="section-wrapper hover:-translate-y-2 group w-auto flex-col bg-surface  rounded-25 gap-25 shadow-[0px_0px_20px_-13px_#000000] duration-300">
+          <div class="overflow-hidden h-full self-stretch shrink rounded-t-25">
+            <img class="object-cover w-full h-auto xl:h-full rounded-t-25 group-hover:scale-110 duration-500" src="/img/thumbnail3.jpg" alt=""
+              loading="lazy">
           </div>
-          <div class="heading-primary">CONTENUTO IN EVIDENZA</div>
-          <div class="line-clamp-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis aspernatur,
-            tempore odit dignissimos aliquam at dolorum inventore modi, sit vero dolores quos? Ex tenetur accusamus
-            velit
-            culpa officiis vero unde provident! At repudiandae magni nulla ea architecto, asperiores ad ipsa unde
-            debitis
-            doloribus quas tenetur maxime, rerum voluptate ipsum minima?</div>
-          <div class="btn bg-text text-surface rounded-full h-auto p-15">
-            SHOW CONTENT
+          <div class="flex flex-col p-25 gap-25 justify-between h-full">
+            <div class="flex flex-col gap-25">
+              <div class="heading-primary">CONTENUTO IN EVIDENZA</div>
+              <div class="line-clamp-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
+                aspernatur,
+                tempore odit dignissimos aliquam at dolorum inventore modi, sit vero dolores quos? Ex tenetur accusamus
+                velit
+                culpa officiis vero unde provident! At repudiandae magni nulla ea architecto, asperiores ad ipsa unde
+                debitis
+                doloribus quas tenetur maxime, rerum voluptate ipsum minima?</div>
+            </div>
+            <div class="show-content-btn">
+              SHOW CONTENT
+            </div>
           </div>
         </article>
+      </div>
 
 
 
@@ -145,105 +170,99 @@
 
 
     <!-- full width msg -->
-    <section class="section-wrapper border-b border-b-text/10">
-      <div class="container-1200 max-w-none py-25 my-25 text-center text-5xl">
-        FULL WIDTH MSG
+    <section class="section-wrapper background-gradient border-b border-b-text/10">
+      <div
+        class="container-1200 max-w-[1600px] py-25 my-25 text-center text-4xl 2xl:text-6xl font-bold font-[Kaushan_Script]">
+        QUESTO SPAZIO È DEDICATO AD ANNUNCI IMPORTANTI
       </div>
     </section>
 
     <!-- sezione articoli e link sidebar -->
-    <section class="section-wrapper py-12.5 bg-bg">
+    <!-- background-image: linear-gradient( 90.6deg,  rgba(251,229,210,1) 18.9%, rgba(217,240,235,1) 39.5%, rgba(208,239,238,1) 51.1%, rgba(219,242,240,1) 62.1%, rgba(233,240,217,1) 84.1% ); -->
+    <!-- <div class="bg-[linear-gradient(to_right,theme(colors.amber.200/1),theme(colors.emerald.100/1),theme(colors.teal.100/1),theme(colors.teal.50/1),theme(colors.lime.100/1))]"> -->
+
+    <section class="section-wrapper  py-12.5 bg-surface">
+
       <!-- wrapper articoli e sidebar -->
-      <div class="container-1200 flex flex-col justify-center gap-25">
+      <div class="max-w-[1600px] flex flex-col xl:flex-row gap-25">
+        <div class="flex-1 container-1200 h-auto flex flex-col  justify-center gap-25">
+          <!-- wrapper card -->
+          <article
+            class="rounded-25! section-wrapper w-auto flex-col xl:flex-row bg-[#FBF6F6] gap-25 max-h-180 hover:shadow-[0px_0px_20px_-13px_#000000] group duration-500">
 
-        <article class="section-wrapper flex-col bg-surface p-25 rounded-25 gap-25">
-          <div class="max-h-70">
-            <img class="object-cover w-full h-50" src="/img/wallpaper.jpg" alt="" loading="lazy">
-          </div>
-          <div class="heading-primary">TITOLO ARTICOLO</div>
-          <div class="line-clamp-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis aspernatur,
-            tempore odit dignissimos aliquam at dolorum inventore modi, sit vero dolores quos? Ex tenetur accusamus
-            velit culpa officiis vero unde provident! At repudiandae magni nulla ea architecto, asperiores ad ipsa unde
-            debitis doloribus quas tenetur maxime, rerum voluptate ipsum minima?</div>
-          <div class="btn bg-text text-surface rounded-full h-auto p-15">
-            Read Article
-          </div>
-        </article>
-
-        <article class="section-wrapper flex-col bg-surface p-25 rounded-25 gap-25">
-          <div class="max-h-70">
-            <img class="object-cover w-full h-50" src="/img/wallpaper.jpg" alt="" loading="lazy">
-          </div>
-          <div class="heading-primary">TITOLO ARTICOLO</div>
-          <div class="line-clamp-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis aspernatur,
-            tempore odit dignissimos aliquam at dolorum inventore modi, sit vero dolores quos? Ex tenetur accusamus
-            velit culpa officiis vero unde provident! At repudiandae magni nulla ea architecto, asperiores ad ipsa unde
-            debitis doloribus quas tenetur maxime, rerum voluptate ipsum minima?</div>
-          <div class="btn bg-text text-surface rounded-full h-auto p-15">
-            Read Article
-          </div>
-        </article>
-
-        <!-- articolo 1 -->
-
-        <!-- 
-        <div class="section-wrapper bg-surface p-25 rounded-25 lg:col-start-1 lg:col-end-3 lg:row-start-1 lg:row-end-1">
-          <div class="w-full  gap-25 flex flex-col lg:grid lg:grid-cols-[350px_1fr] lg:items-start lg:gap-x-[40px]">
-
-            <div class="lg:order-2 heading-primary">
-              TITOLO ARTICOLO
+            <!-- container immagine card -->
+            <div class="xl:w-[45%]! xl:min-w-[45%] xl:max-w-[45%] overflow-hidden h-full self-stretch shrink rounded-t-25 xl:rounded-t-none xl:rounded-s-25!">
+              <img class="object-cover w-full h-auto xl:h-full rounded-t-25 xl:rounded-t-none xl:rounded-s-25! group-hover:scale-110 duration-500"
+                src="/img/thumbnail3.jpg" alt="" loading="lazy">
             </div>
 
-            <div class="w-full lg:order-1 lg:row-span-2">
-              <div class="overflow-hidden rounded-25 lg:aspect-square lg:aspect-[4/3]">
-                <img width="960" height="380" src="./img/times-square-traffic.webp" alt="Traffico a Times Square"
-                  class="w-full h-full object-cover" loading="lazy">
+            <!-- container contenuto -->
+            <div class=" flex flex-col p-25 gap-25 justify-between backdrop-blur-md rounded-25">
+              <div class="flex flex-col gap-25">
+                <div class="heading-primary">CONTENUTO IN EVIDENZA</div>
+                <div class="line-clamp-10 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
+                  aspernatur,
+                  tempore odit dignissimos aliquam at dolorum inventore modi, sit vero dolores quos? Ex tenetur
+                  accusamus
+                  velit
+                  culpa officiis vero unde provident! At repudiandae magni nulla ea architecto, asperiores ad ipsa unde
+                  debitis
+                  doloribus quas tenetur maxime, rerum voluptate ipsum minima?</div>
+              </div>
+              <div class="show-content-btn border-none">
+                SHOW CONTENT
               </div>
             </div>
+          </article>
 
-            <div class="article-content lg:order-3">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium labore veniam omnis autem optio
-              corporis a porro, minus necessitatibus eius, sint repudiandae hic ratione accusamus, repellendus voluptate
-              consequuntur architecto sed laboriosam cum!
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus delectus dolor, modi nemo fugiat culpa
-              nihil consectetur, obcaecati fuga aspernatur minus debitis enim natus rem distinctio beatae autem
-              accusantium iste provident sint necessitatibus numquam neque? Voluptate blanditiis, nihil iure, ipsam,
-              corporis deserunt quis modi ad eos debitis eius quibusdam autem natus voluptates repudiandae vel. Qui
-              minima atque nobis iste tempore, autem totam voluptatum est? Numquam officiis odit libero dolore, vel,
-              ipsum id consequuntur modi temporibus ipsam earum. Non corporis blanditiis perspiciatis atque, accusantium
-              cupiditate officia at maiores consequuntur, molestias laudantium eius iusto voluptates consequatur!
-              Commodi, animi iste nihil provident, a hic doloribus architecto maxime deserunt dolorem laudantium sit
-              doloremque, repudiandae expedita repellat saepe dolorum quam exercitationem sint inventore aperiam.
-              Necessitatibus quidem ea adipisci voluptas, illo eveniet voluptates officia quod temporibus earum unde
-              ipsa aut delectus ad? Ipsa animi eligendi sapiente blanditiis fuga unde illum magni mollitia omnis,
-              repellendus ex ab.
+          <article
+            class="rounded-25! section-wrapper w-auto flex-col xl:flex-row bg-[#FBF6F6] gap-25 max-h-180 hover:shadow-[0px_0px_20px_-13px_#000000] group duration-500">
 
+            <!-- container immagine card -->
+            <div class="xl:w-[45%]! xl:min-w-[45%] xl:max-w-[45%] overflow-hidden h-full self-stretch shrink rounded-t-25 xl:rounded-t-none xl:rounded-s-25!">
+              <img class="object-cover w-full h-auto xl:h-full rounded-t-25 xl:rounded-t-none xl:rounded-s-25! group-hover:scale-110 duration-500"
+                src="/img/thumbnail1.jpg" alt="" loading="lazy">
             </div>
-          </div>
 
-        </div> -->
-
-        <!-- sidebar -->
-        <!-- <div class="section-wrapper sidebar-desktop flex-col justify-start items-center">
-          <div class="w-full px-25 lg:px-0 py-25 lg:my-0 gap-25 flex flex-col lg:h-full md:items-center">
-            <div class="heading-primary">LINK SECTION</div>
-
-            <div class="w-full grid grid-cols-[repeat(auto-fit,minmax(120px,1fr))] gap-10 lg:grid-cols-1">
-              <div class="btn-grid-link">MY LINK</div>
-              <div class="btn-grid-link">MY LINK</div>
-              <div class="btn-grid-link">MY LINK</div>
-              <div class="btn-grid-link">MY LINK</div>
-              <div class="btn-grid-link">MY LINK</div>
-              <div class="btn-grid-link">MY LINK</div>
+            <!-- container contenuto -->
+            <div class=" flex flex-col p-25 gap-25 justify-between backdrop-blur-md rounded-25">
+              <div class="flex flex-col gap-25">
+                <div class="heading-primary">CONTENUTO IN EVIDENZA</div>
+                <div class="line-clamp-10 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
+                  aspernatur,
+                  tempore odit dignissimos aliquam at dolorum inventore modi, sit vero dolores quos? Ex tenetur
+                  accusamus
+                  velit
+                  culpa officiis vero unde provident! At repudiandae magni nulla ea architecto, asperiores ad ipsa unde
+                  debitis
+                  doloribus quas tenetur maxime, rerum voluptate ipsum minima?</div>
+              </div>
+              <div class="show-content-btn border-none">
+                SHOW CONTENT
+              </div>
             </div>
-          </div>
-        </div> -->
+          </article>
+        </div>
 
+        <!-- SIDEBAR -->
+        <div class="px-25 min-w-[150px] w-full xl:w-[30%] ">
+          <aside
+            class="list  p-25 rounded-25 bg-white/60 w-full  gap-25 items-center shadow-[0px_0px_20px_-13px_#000000]">
+            <h3 class="heading-primary text-[45px]">SIDEBAR</h3>
+            <div class="link-btn gradient-btn hover:-translate-y-0.5"><a href="">MY LINK</a></div>
+            <div class="link-btn gradient-btn hover:-translate-y-0.5"><a href="">MY LINK</a></div>
+            <div class="link-btn gradient-btn hover:-translate-y-0.5"><a href="">MY LINK</a></div>
+            <div class="link-btn gradient-btn hover:-translate-y-0.5"><a href="">MY LINK</a></div>
+            <div class="link-btn gradient-btn hover:-translate-y-0.5"><a href="">MY LINK</a></div>
+            <div class="link-btn gradient-btn hover:-translate-y-0.5"><a href="">MY LINK</a></div>
+          </aside>
+        </div>
       </div>
+
     </section>
 
     <!-- info section -->
-    <section class="section-wrapper flex-col items-center bg-verde-scuro">
+    <!-- <section class="section-wrapper flex-col items-center bg-verde-scuro">
       <div class="container-1200 my-25 gap-25 flex flex-col items-center">
         <div class="section-wrapper py-25 border-b-4 border-b-beige-chiaro">
           <img width="40" height="40" src="./icons/info.svg" alt="">
@@ -276,31 +295,40 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
   </main>
 
   <!-- footer -->
-  <footer class="footer footer-horizontal footer-center bg-base-200 text-base-content rounded p-10">
-    <nav class="grid grid-flow-col gap-4">
-      <a class="link link-hover">About us</a>
-      <a class="link link-hover">Contact</a>
-      <a class="link link-hover">Jobs</a>
-      <a class="link link-hover">Press kit</a>
-    </nav>
-    <nav>
-      <div class="grid grid-flow-col gap-4">
-        <a target="_blank" href="https://www.facebook.com/">
-          <img width="48" height="48" src="./icons/facebook.svg" alt="Facebook Link">
-        </a>
-        <a target="_blank" href="https://www.linkedin.com/">
-          <img width="48" height="48" src="./icons/linkedin.svg" alt="Linkedin Link">
-        </a>
-        <a target="_blank" href="https://www.instagram.com/">
-          <img width="48" height="48" src="./icons/instagram.svg" alt="Instagram Link">
-        </a>
-      </div>
-    </nav>
+  <footer class="flex background-gradient text-base-content p-25 justify-center">
+    <div class="max-w-400 footer sm:footer-horizontal px-25">
+      <aside>
+        <p >
+          Made by
+          <span class="footer-title opacity-100 text-text">FILIPPO GRANATA</span>
+        </p>
+      </aside>
+      <nav>
+        <h6 class="footer-title opacity-100 text-text">Services</h6>
+        <a class="link link-hover">Branding</a>
+        <a class="link link-hover">Design</a>
+        <a class="link link-hover">Marketing</a>
+        <a class="link link-hover">Advertisement</a>
+      </nav>
+      <nav>
+        <h6 class="footer-title opacity-100 text-text">Company</h6>
+        <a class="link link-hover">About us</a>
+        <a class="link link-hover">Contact</a>
+        <a class="link link-hover">Jobs</a>
+        <a class="link link-hover">Press kit</a>
+      </nav>
+      <nav>
+        <h6 class="footer-title opacity-100 text-text">Legal</h6>
+        <a class="link link-hover">Terms of use</a>
+        <a class="link link-hover">Privacy policy</a>
+        <a class="link link-hover">Cookie policy</a>
+      </nav>
+    </div>
   </footer>
 
 
