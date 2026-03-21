@@ -9,71 +9,62 @@
   <title>slideshow - Landing Page</title>
   <meta name="description" content="Landing page modernizzata di un sito obsoleto">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+  
+
 </head>
 
 <body>
   <!-- header -->
-  <header class="fixed top-25 drawer drawer-end z-100">
-    <input id="sidebar" type="checkbox" class="drawer-toggle" />
+  <header class="fixed top-25 w-full z-100">
 
     <!-- Navbar -->
     <div class="drawer-content flex flex-col items-center px-25">
 
-      <div class="navbar section-wrapper w-full px-25 py-5 bg-white/60 backdrop-blur-md rounded-full max-w-[1600px]">
-
+      <div class="navbar section-wrapper w-full px-25 py-5 bg-white/60 backdrop-blur-md rounded-full max-w-400">
         <div class="flex justify-between items-center w-full h-full">
 
           <div class="flex-1 w-full">
             <h1 class="navbar-title">
-              SLIDESHOW</h1>
+              SLIDESHOW
+            </h1>
           </div>
 
-          <div class="flex-none md:hidden">
-            <label for="sidebar" aria-label="open sidebar" class="utility-btn">
-              <img width="36" height="36" src="./icons/menu-hamburger.svg" alt="">
-            </label>
-          </div>
+          <div class="flex justify-center items-center ">
+            <div class="container-1200 px-0 items-center gap-10 md:gap-25 flex ">
+              <div class="navbar-btn">
+                <span class="hidden md:block">HOME</span>
+                <span class="block md:hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="36" class="cursor-pointer ">
+                    <path fill="#0f172a"
+                      d="M341.8 72.6C329.5 61.2 310.5 61.2 298.3 72.6L74.3 280.6C64.7 289.6 61.5 303.5 66.3 315.7C71.1 327.9 82.8 336 96 336L112 336L112 512C112 547.3 140.7 576 176 576L464 576C499.3 576 528 547.3 528 512L528 336L544 336C557.2 336 569 327.9 573.8 315.7C578.6 303.5 575.4 289.5 565.8 280.6L341.8 72.6zM304 384L336 384C362.5 384 384 405.5 384 432L384 528L256 528L256 432C256 405.5 277.5 384 304 384z" />
+                  </svg>
+                </span>
+              </div>
+              <div class="navbar-btn">
+                <span class="hidden md:block">ABOUT</span>
+                <span class="block md:hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="36" class="cursor-pointer ">
+                    <path fill="#0f172a"
+                      d="M320 576C461.4 576 576 461.4 576 320C576 178.6 461.4 64 320 64C178.6 64 64 178.6 64 320C64 461.4 178.6 576 320 576zM288 224C288 206.3 302.3 192 320 192C337.7 192 352 206.3 352 224C352 241.7 337.7 256 320 256C302.3 256 288 241.7 288 224zM280 288L328 288C341.3 288 352 298.7 352 312L352 400L360 400C373.3 400 384 410.7 384 424C384 437.3 373.3 448 360 448L280 448C266.7 448 256 437.3 256 424C256 410.7 266.7 400 280 400L304 400L304 336L280 336C266.7 336 256 325.3 256 312C256 298.7 266.7 288 280 288z" />
+                  </svg>
+                </span>
+              </div>
+              <div class="navbar-btn">
+                <span class="hidden md:block">CONTACT</span>
+                <span class="block md:hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640 " width="36" class="cursor-pointer ">
+                    <path fill="#0f172a"
+                      d="M320 97.9L128.4 239.8L286.5 357C291.8 360.9 297.7 363.9 304 365.7L304 528C304 533.5 304.5 538.8 305.3 544L128 544C92.7 544 64 515.3 64 480L64 240.1C64 219.8 73.6 200.7 89.9 188.7L286.5 43C296.2 35.8 307.9 32 320 32C332.1 32 343.8 35.9 353.5 43L550.1 188.7C557.3 194 563.2 200.7 567.5 208.3C565 208.1 562.5 208 560 208L468.6 208L320 97.9zM352 304C352 277.5 373.5 256 400 256L560 256C586.5 256 608 277.5 608 304L608 528C608 554.5 586.5 576 560 576L400 576C373.5 576 352 554.5 352 528L352 304zM432 320C418.7 320 408 330.7 408 344C408 357.3 418.7 368 432 368L528 368C541.3 368 552 357.3 552 344C552 330.7 541.3 320 528 320L432 320zM432 416C418.7 416 408 426.7 408 440C408 453.3 418.7 464 432 464L488 464C501.3 464 512 453.3 512 440C512 426.7 501.3 416 488 416L432 416z" />
+                  </svg>
+                </span>
+              </div>
 
-          <div class="hidden md:flex justify-center items-center ">
-            <div class="container-1200 px-0 items-center gap-25 flex ">
-              <div class="navbar-btn">
-                HOME
-              </div>
-              <div class="navbar-btn">
-                ABOUT
-              </div>
-              <div class="navbar-btn">
-                CONTACT
-              </div>
+
             </div>
 
           </div>
         </div>
-
       </div>
-
-    </div>
-
-    <!-- sidebar verticale -->
-    <div class="drawer-side z-50">
-      <label for="sidebar" aria-label="close sidebar" class="drawer-overlay"></label>
-
-      <ul class="menu bg-surface min-h-full w-80 p-4 text-white gap-25">
-        <div class="flex w-full justify-end">
-          <label for="sidebar" aria-label="close sidebar" class="utility-btn">
-            <img width="36" height="36" src="./icons/cross.svg" alt="" aria-label="close sidebar">
-          </label>
-        </div>
-
-        <!-- Sidebar content here -->
-        <li><a class="sidebar-btn">Home</a></li>
-        <li><a class="sidebar-btn"> About</a></li>
-        <li><a class="sidebar-btn">Contact</a></li>
-
-      </ul>
     </div>
   </header>
 
@@ -81,8 +72,17 @@
   <main>
     <!-- slider -->
     <section class="section-wrapper border-b border-b-text/10">
-      <div class="max-h-[75vh] section-wrapper object-fit">
-        <img class="w-full object-cover" src="./img/wallpaper.jpg" alt="">
+      <div
+        class="max-h-[75vh] h-[45vh] lg:min-h-125 lg:h-[65vh] w-full section-wrapper bg-cover bg-center flex items-center bg-[url(/img/wallpaper.webp)]">
+
+        <span class="text-rotate text-4xl lg:text-8xl duration-10000">
+          <span class="justify-items-center">
+            <span class="text-slider">CREATIVE CODING</span>
+            <span class=" text-slider">RESPONSIVE</span>
+            <span class="text-slider">FAST</span>
+            <span class="text-slider">MODERN</span>
+          </span>
+        </span>
       </div>
     </section>
 
@@ -96,22 +96,26 @@
         <article
           class="section-wrapper hover:-translate-y-2 group w-auto flex-col bg-surface  rounded-25 gap-25 shadow-[0px_0px_20px_-13px_#000000] duration-300">
           <div class="overflow-hidden h-full self-stretch shrink rounded-t-25">
-            <img class="object-cover w-full h-auto xl:h-full rounded-t-25 group-hover:scale-110 duration-500" src="/img/thumbnail1.jpg" alt=""
-              loading="lazy">
+            <img class="object-cover w-full h-auto xl:h-full rounded-t-25 group-hover:scale-110 duration-500"
+              src="/img/thumbnail1.webp" alt="" loading="lazy">
           </div>
           <div class="flex flex-col p-25 gap-25 justify-between h-full">
             <div class="flex flex-col gap-25">
-              <div class="heading-primary">CONTENUTO IN EVIDENZA</div>
-              <div class="line-clamp-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
+              <h2 class="heading-primary">CONTENUTO IN EVIDENZA</h2>
+              <p class="line-clamp-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
                 aspernatur,
                 tempore odit dignissimos aliquam at dolorum inventore modi, sit vero dolores quos? Ex tenetur accusamus
                 velit
                 culpa officiis vero unde provident! At repudiandae magni nulla ea architecto, asperiores ad ipsa unde
                 debitis
-                doloribus quas tenetur maxime, rerum voluptate ipsum minima?</div>
+                doloribus quas tenetur maxime, rerum voluptate ipsum minima?</p>
             </div>
             <div class="show-content-btn">
-              SHOW CONTENT
+              READ MORE
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-20">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+              </svg>
             </div>
           </div>
         </article>
@@ -120,22 +124,23 @@
         <article
           class="section-wrapper hover:-translate-y-2 group w-auto flex-col bg-surface  rounded-25 gap-25 shadow-[0px_0px_20px_-13px_#000000] duration-300">
           <div class="overflow-hidden h-full self-stretch shrink rounded-t-25">
-            <img class="object-cover w-full h-auto xl:h-full rounded-t-25 group-hover:scale-110 duration-500" src="/img/thumbnail2.jpg" alt=""
-              loading="lazy">
+            <img class="object-cover w-full h-auto xl:h-full rounded-t-25 group-hover:scale-110 duration-500"
+              src="/img/thumbnail2.webp" alt="" loading="lazy">
           </div>
           <div class="flex flex-col p-25 gap-25 justify-between h-full">
             <div class="flex flex-col gap-25">
-              <div class="heading-primary">CONTENUTO IN EVIDENZA</div>
-              <div class="line-clamp-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
-                aspernatur,
-                tempore odit dignissimos aliquam at dolorum inventore modi, sit vero dolores quos? Ex tenetur accusamus
-                velit
-                culpa officiis vero unde provident! At repudiandae magni nulla ea architecto, asperiores ad ipsa unde
-                debitis
-                doloribus quas tenetur maxime, rerum voluptate ipsum minima?</div>
+              <h2 class="heading-primary">CONTENUTO IN EVIDENZA</h2>
+              <p class="line-clamp-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem et officiis optio
+                sequi rerum ea eum vero eaque libero? Dolor voluptates explicabo quibusdam totam atque officiis
+                blanditiis in exercitationem odio quo maxime accusantium vel corporis expedita beatae, molestiae
+                ducimus, alias, eum corrupti? Optio aperiam qui mollitia? Eligendi inventore dolore officiis.</p>
             </div>
             <div class="show-content-btn">
-              SHOW CONTENT
+              READ MORE
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-20">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+              </svg>
             </div>
         </article>
 
@@ -143,22 +148,23 @@
         <article
           class="section-wrapper hover:-translate-y-2 group w-auto flex-col bg-surface  rounded-25 gap-25 shadow-[0px_0px_20px_-13px_#000000] duration-300">
           <div class="overflow-hidden h-full self-stretch shrink rounded-t-25">
-            <img class="object-cover w-full h-auto xl:h-full rounded-t-25 group-hover:scale-110 duration-500" src="/img/thumbnail3.jpg" alt=""
-              loading="lazy">
+            <img class="object-cover w-full h-auto xl:h-full rounded-t-25 group-hover:scale-110 duration-500"
+              src="/img/thumbnail3.webp" alt="" loading="lazy">
           </div>
-          <div class="flex flex-col p-25 gap-25 justify-between h-full">
+          <div class="flex flex-col p-25 gap-25 justify-between ">
             <div class="flex flex-col gap-25">
-              <div class="heading-primary">CONTENUTO IN EVIDENZA</div>
-              <div class="line-clamp-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
-                aspernatur,
-                tempore odit dignissimos aliquam at dolorum inventore modi, sit vero dolores quos? Ex tenetur accusamus
-                velit
-                culpa officiis vero unde provident! At repudiandae magni nulla ea architecto, asperiores ad ipsa unde
-                debitis
-                doloribus quas tenetur maxime, rerum voluptate ipsum minima?</div>
+              <h2 class="heading-primary">CONTENUTO IN EVIDENZA</h2>
+              <p class="line-clamp-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta veniam aliquam
+                deleniti vel error eum, omnis id consequatur quisquam quod? Id amet assumenda impedit sed perferendis
+                explicabo hic? Praesentium magnam maxime inventore quia eos repudiandae voluptatibus alias doloremque
+                officia minus nihil, porro molestias, veritatis voluptatem unde tempore cupiditate, odio ab.</p>
             </div>
             <div class="show-content-btn">
-              SHOW CONTENT
+              READ MORE
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-20">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+              </svg>
             </div>
           </div>
         </article>
@@ -171,46 +177,51 @@
 
     <!-- full width msg -->
     <section class="section-wrapper background-gradient border-b border-b-text/10">
-      <div
-        class="container-1200 max-w-[1600px] py-25 my-25 text-center text-4xl 2xl:text-6xl font-bold font-[Kaushan_Script]">
-        QUESTO SPAZIO È DEDICATO AD ANNUNCI IMPORTANTI
+      <div class="container-1200 max-w-400 py-25 my-25 text-center   flex flex-col gap-25">
+        <div class="text-4xl 2xl:text-6xl font-[Crimson_Text]">
+          MESSAGGIO A TUTTA LUNGHEZZA
+        </div>
+        <div class="text-xl 2xl:text-3xl">
+          Questo spazio è dedicato ad annunci importanti
+        </div>
       </div>
     </section>
 
-    <!-- sezione articoli e link sidebar -->
-    <!-- background-image: linear-gradient( 90.6deg,  rgba(251,229,210,1) 18.9%, rgba(217,240,235,1) 39.5%, rgba(208,239,238,1) 51.1%, rgba(219,242,240,1) 62.1%, rgba(233,240,217,1) 84.1% ); -->
-    <!-- <div class="bg-[linear-gradient(to_right,theme(colors.amber.200/1),theme(colors.emerald.100/1),theme(colors.teal.100/1),theme(colors.teal.50/1),theme(colors.lime.100/1))]"> -->
+
 
     <section class="section-wrapper  py-12.5 bg-surface">
 
       <!-- wrapper articoli e sidebar -->
-      <div class="max-w-[1600px] flex flex-col xl:flex-row gap-25">
-        <div class="flex-1 container-1200 h-auto flex flex-col  justify-center gap-25">
+      <div class="max-w-400 flex flex-col xl:flex-row gap-25">
+        <div class="flex-1 container-1200 h-auto flex flex-col justify-center gap-25">
           <!-- wrapper card -->
           <article
             class="rounded-25! section-wrapper w-auto flex-col xl:flex-row bg-[#FBF6F6] gap-25 max-h-180 hover:shadow-[0px_0px_20px_-13px_#000000] group duration-500">
 
             <!-- container immagine card -->
-            <div class="xl:w-[45%]! xl:min-w-[45%] xl:max-w-[45%] overflow-hidden h-full self-stretch shrink rounded-t-25 xl:rounded-t-none xl:rounded-s-25!">
-              <img class="object-cover w-full h-auto xl:h-full rounded-t-25 xl:rounded-t-none xl:rounded-s-25! group-hover:scale-110 duration-500"
-                src="/img/thumbnail3.jpg" alt="" loading="lazy">
+            <div
+              class="xl:w-[45%]! xl:min-w-[45%] xl:max-w-[45%] overflow-hidden h-full self-stretch shrink rounded-t-25 xl:rounded-t-none xl:rounded-s-25!">
+              <img
+                class="object-cover w-full h-auto xl:h-full rounded-t-25 xl:rounded-t-none xl:rounded-s-25! group-hover:scale-110 duration-500"
+                src="/img/thumbnail3.webp" alt="" loading="lazy">
             </div>
 
             <!-- container contenuto -->
             <div class=" flex flex-col p-25 gap-25 justify-between backdrop-blur-md rounded-25">
               <div class="flex flex-col gap-25">
-                <div class="heading-primary">CONTENUTO IN EVIDENZA</div>
-                <div class="line-clamp-10 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
-                  aspernatur,
-                  tempore odit dignissimos aliquam at dolorum inventore modi, sit vero dolores quos? Ex tenetur
-                  accusamus
-                  velit
-                  culpa officiis vero unde provident! At repudiandae magni nulla ea architecto, asperiores ad ipsa unde
-                  debitis
-                  doloribus quas tenetur maxime, rerum voluptate ipsum minima?</div>
+                <h2 class="heading-primary">CONTENUTO IN EVIDENZA</h2>
+                <p class="line-clamp-5 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum impedit
+                  necessitatibus mollitia eligendi animi ducimus ea consectetur nisi recusandae incidunt sapiente
+                  tempore doloremque tenetur ipsam minima assumenda vero, ad facilis earum culpa est. Corporis quis
+                  nesciunt facere sapiente atque voluptatum ea esse expedita natus. Recusandae suscipit accusantium
+                  voluptatum voluptate repellat!</p>
               </div>
               <div class="show-content-btn border-none">
-                SHOW CONTENT
+                READ MORE
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="size-20">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                </svg>
               </div>
             </div>
           </article>
@@ -219,26 +230,32 @@
             class="rounded-25! section-wrapper w-auto flex-col xl:flex-row bg-[#FBF6F6] gap-25 max-h-180 hover:shadow-[0px_0px_20px_-13px_#000000] group duration-500">
 
             <!-- container immagine card -->
-            <div class="xl:w-[45%]! xl:min-w-[45%] xl:max-w-[45%] overflow-hidden h-full self-stretch shrink rounded-t-25 xl:rounded-t-none xl:rounded-s-25!">
-              <img class="object-cover w-full h-auto xl:h-full rounded-t-25 xl:rounded-t-none xl:rounded-s-25! group-hover:scale-110 duration-500"
-                src="/img/thumbnail1.jpg" alt="" loading="lazy">
+            <div
+              class="xl:w-[45%]! xl:min-w-[45%] xl:max-w-[45%] overflow-hidden h-full self-stretch shrink rounded-t-25 xl:rounded-t-none xl:rounded-s-25!">
+              <img
+                class="object-cover w-full h-auto xl:h-full rounded-t-25 xl:rounded-t-none xl:rounded-s-25! group-hover:scale-110 duration-500"
+                src="/img/thumbnail1.webp" alt="" loading="lazy">
             </div>
 
             <!-- container contenuto -->
             <div class=" flex flex-col p-25 gap-25 justify-between backdrop-blur-md rounded-25">
               <div class="flex flex-col gap-25">
-                <div class="heading-primary">CONTENUTO IN EVIDENZA</div>
-                <div class="line-clamp-10 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
+                <h2 class="heading-primary">CONTENUTO IN EVIDENZA</h2>
+                <p class="line-clamp-5 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
                   aspernatur,
                   tempore odit dignissimos aliquam at dolorum inventore modi, sit vero dolores quos? Ex tenetur
                   accusamus
                   velit
                   culpa officiis vero unde provident! At repudiandae magni nulla ea architecto, asperiores ad ipsa unde
                   debitis
-                  doloribus quas tenetur maxime, rerum voluptate ipsum minima?</div>
+                  doloribus quas tenetur maxime, rerum voluptate ipsum minima?</p>
               </div>
               <div class="show-content-btn border-none">
-                SHOW CONTENT
+                READ MORE
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="size-20">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                </svg>
               </div>
             </div>
           </article>
@@ -247,7 +264,7 @@
         <!-- SIDEBAR -->
         <div class="px-25 min-w-[150px] w-full xl:w-[30%] ">
           <aside
-            class="list  p-25 rounded-25 bg-white/60 w-full  gap-25 items-center shadow-[0px_0px_20px_-13px_#000000]">
+            class="list  p-25 rounded-25 bg-[#FBF6F6] w-full  gap-25 items-center shadow-[0px_0px_20px_-13px_#000000]">
             <h3 class="heading-primary text-[45px]">SIDEBAR</h3>
             <div class="link-btn gradient-btn hover:-translate-y-0.5"><a href="">MY LINK</a></div>
             <div class="link-btn gradient-btn hover:-translate-y-0.5"><a href="">MY LINK</a></div>
@@ -303,7 +320,7 @@
   <footer class="flex background-gradient text-base-content p-25 justify-center">
     <div class="max-w-400 footer sm:footer-horizontal px-25">
       <aside>
-        <p >
+        <p>
           Made by
           <span class="footer-title opacity-100 text-text">FILIPPO GRANATA</span>
         </p>

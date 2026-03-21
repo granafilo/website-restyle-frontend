@@ -7,11 +7,31 @@
   font-display: swap;
 }
 
-
-.kaushan-script-regular {
-  font-family: "Kaushan Script", cursive;
-  font-weight: 400;
+@font-face {
+  font-family: 'Cinzel';
+  src: url('./assets/fonts/Cinzel-VariableFont_wght.ttf') format('truetype-variations');
+  font-weight: 100 900;
+  /* Questo permette di usare ogni spessore */
   font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cormorant';
+  src: url('./assets/fonts/Cormorant-VariableFont_wght.ttf') format('truetype-variations');
+  font-weight: 100 900;
+  /* Questo permette di usare ogni spessore */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Crimson Text';
+  src: url('./assets/fonts/CrimsonText-Regular.ttf') format('truetype-variations');
+  font-weight: 100 900;
+  /* Questo permette di usare ogni spessore */
+  font-style: normal;
+  font-display: swap;
 }
 
 
@@ -65,7 +85,7 @@
   --spacing-25: 25px;
 
   --spacing-gap: 25px;
-  
+
   --radius-25: 25px;
 
   --text-15: 15px;
@@ -100,24 +120,33 @@ test {
     @apply lg:aspect-auto;
   }
 
-  .navbar-title{
+  .navbar-title {
     /* flex text-4xl font-bold text-text truncate tracking-tight w-full lg:justify-center lg:text-6xl */
-    @apply flex lg:justify-start ;
+    @apply flex lg:justify-start;
     @apply w-full;
-    @apply text-text font-bold text-2xl  truncate; 
+    @apply text-text font-bold text-2xl truncate;
   }
 
-  .navbar-btn{
+  .navbar-btn {
     /* flex justify-center btn bg-primary hover:bg-primary-light py-10 h-auto rounded-full text-[24px] hover:border-none hover:shadow-[0px_0px_10px_0px_#000000] text-text duration-300 */
-    @apply btn btn-ghost bg-text;
+    @apply btn btn-ghost md:bg-text;
     @apply flex justify-center;
-    @apply py-10  px-20  h-auto rounded-full;
+    @apply p-5 md:py-10 md:px-20 h-auto rounded-full;
     @apply text-sm text-surface;
     @apply duration-300;
     @apply hover:border hover:border-primary hover:shadow-[0px_0px_10px_0px_#2563EB];
   }
 
-  .utility-btn{
+  .text-slider {
+    /* font-semibold text-text text-shadow-sm text-shadow-white backdrop-blur-md rounded-full px-10 
+     */
+     @apply text-white/80 font-semibold;
+     @apply rounded-full px-10;
+     @apply font-[Cinzel]
+     /* @apply backdrop-blur-md; */
+  }
+
+  .utility-btn {
     /* class="btn btn-circle btn-ghost w-full h-full p-2 hover:bg-primary-light" */
     @apply btn btn-circle btn-ghost;
     @apply w-auto h-full p-2;
@@ -125,16 +154,16 @@ test {
   }
 
   .active {
-    @apply bg-primary-light! ;
+    @apply bg-primary-light;
   }
 
-  .sidebar-btn{
+  .sidebar-btn {
     /* btn btn-ghost rounded-full text-25 text-text font-bold */
-    @apply btn btn-ghost rounded-full! py-5 h-auto;
+    @apply btn btn-ghost rounded-full py-5 h-auto;
     @apply bg-text;
     @apply text-25 text-surface font-bold;
-    @apply hover:border hover:border-primary hover:shadow-[0px_0px_10px_0px_#2563EB]!;
-    @apply hover:bg-text!;
+    @apply hover:border hover:border-primary hover:shadow-[0px_0px_10px_0px_#2563EB];
+    @apply hover:bg-text;
     @apply duration-300;
   }
 
@@ -155,16 +184,16 @@ test {
     @apply bg-surface;
   }
 
-  .show-content-btn{
+  .show-content-btn {
     @apply btn;
-    @apply bg-text text-surface;
+    @apply bg-text text-surface font-[cormorant] text-[17px];
     @apply h-auto p-15 rounded-full;
     @apply hover:border hover:border-primary hover:shadow-[0px_0px_10px_0px_#2563EB];
     @apply duration-300;
   }
 
   .heading-primary {
-    @apply text-3xl font-bold text-text
+    @apply text-3xl font-bold text-text font-[cormorant];
   }
 
   .article-content {
@@ -179,24 +208,24 @@ test {
     @apply lg:col-start-3 lg:col-end-3 lg:row-start-1 lg:row-end-3;
   }
 
-  .link-btn{
+  .link-btn {
     @apply btn btn-ghost;
-    @apply w-full h-auto px-15 py-10 rounded-full!;
+    @apply w-full h-auto px-15 py-10 rounded-full;
     @apply text-surface text-[20px];
     @apply hover:border hover:border-primary hover:shadow-[0px_0px_30px_0px_#2563EB];
     @apply duration-500;
   }
 
-  .background-gradient{
-    background-image: linear-gradient( 90.6deg,  rgba(251,229,210,1) 18.9%, rgba(217,240,235,1) 39.5%, rgba(208,239,238,1) 51.1%, rgba(219,242,240,1) 62.1%, rgba(233,240,217,1) 84.1% );
+  .background-gradient {
+    background-image: linear-gradient(90.6deg, rgba(251, 229, 210, 1) 18.9%, rgba(217, 240, 235, 1) 39.5%, rgba(208, 239, 238, 1) 51.1%, rgba(219, 242, 240, 1) 62.1%, rgba(233, 240, 217, 1) 84.1%);
   }
 
-  .gradient-btn{
-    background-image: radial-gradient( circle farthest-corner at 17.6% 50.7%, #0F172A  0%, rgb(54, 54, 54) 90% );
+  .gradient-btn {
+    background-image: radial-gradient(circle farthest-corner at 17.6% 50.7%, #0F172A 0%, rgb(54, 54, 54) 90%);
   }
 
-  .link-hover{
-    @apply hover:text-[#4e406d];
+  .link-hover {
+    @apply hover:font-bold hover:no-underline!;
   }
 }
 
