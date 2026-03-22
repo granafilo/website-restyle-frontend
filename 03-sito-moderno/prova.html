@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>SLIDESHOW | The Synthetic Horizon</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-surface": "#dae2fd",
+                        "secondary": "#ffb2b7",
+                        /*"surface-dim": "#0b1326",
+                        "inverse-surface": "#dae2fd",*/
+                        "primary": "#89ceff",
+                        "on-tertiary-fixed-variant": "#3f465c",
+                        "secondary-container": "#b50036",
+                        "on-primary": "#00344d",
+                        /*"on-tertiary-container": "#2b3347",
+                        "inverse-on-surface": "#283044",*/
+                        "surface-container-lowest": "#060e20",
+                        // "on-secondary-fixed-variant": "#92002a",
+                        // "inverse-primary": "#006591",
+                        // "on-primary-fixed-variant": "#004c6e",
+                        "tertiary-fixed": "#dae2fd",
+                        "primary-fixed-dim": "#89ceff",
+                        "surface-container": "#171f33",
+                        "on-secondary-fixed": "#40000d",
+                        "surface": "#0b1326",
+                        // "surface-tint": "#89ceff",
+                        "error-container": "#93000a",
+                        "secondary-fixed": "#ffdadb",
+                        "error": "#ffb4ab",
+                        "primary-container": "#0ea5e9",
+                        // "on-primary-fixed": "#001e2f",
+                        "surface-container-low": "#131b2e",
+                        "surface-container-high": "#222a3d",
+                        // "on-background": "#dae2fd",
+                        "tertiary": "#bec6e0",
+                        // "on-tertiary": "#283044",
+                        // "on-tertiary-fixed": "#131b2e",
+                        "primary-fixed": "#c9e6ff",
+                        "outline-variant": "#3e4850",
+                        // "on-error-container": "#ffdad6",
+                        // "on-primary-container": "#003751",
+                        // "tertiary-container": "#939bb3",
+                        // "on-secondary": "#67001b",
+                        "outline": "#88929b",
+                        // "secondary-fixed-dim": "#ffb2b7",
+                        // "tertiary-fixed-dim": "#bec6e0",
+                        "background": "#0b1326",
+                        "surface-variant": "#2d3449",
+                        "surface-container-highest": "#2d3449",
+                        // "on-error": "#690005",
+                        // "surface-bright": "#31394d",
+                        "on-surface-variant": "#bec8d2",
+                        // "on-secondary-container": "#ffc2c4"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Manrope"],
+                        "label": ["Space Grotesk"]
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0b1326;
+            color: #dae2fd;
+            font-family: 'Manrope', sans-serif;
+        }
+
+        .glass-morphism {
+            background: rgba(45, 52, 73, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+
+        .neon-text-glow {
+            text-shadow: 0 0 10px rgba(137, 206, 255, 0.5), 0 0 20px rgba(137, 206, 255, 0.3);
+        }
+
+        .mesh-gradient {
+            background-image:
+                radial-gradient(at 0% 0%, rgba(137, 206, 255, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(255, 178, 183, 0.1) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(14, 165, 233, 0.15) 0px, transparent 50%);
+        }
+    </style>
+</head>
+
+<body class="selection:bg-primary/30 selection:text-primary">
+    <!-- TopAppBar -->
+    <nav
+        class="fixed top-0 w-full z-50 bg-slate-950/60 backdrop-blur-xl shadow-[0_0_20px_rgba(14,165,233,0.1)] transition-all duration-300 ease-in-out">
+        <div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+            <div class="text-2xl font-black tracking-tighter text-slate-100 dark:text-slate-100">
+                SLIDESHOW
+            </div>
+            <div class="hidden md:flex items-center gap-8">
+                <a class="text-sm font-medium text-sky-400 border-b-2 border-sky-400 pb-1"
+                    href="#">Home</a>
+                <a class="text-sm font-medium   text-slate-400 hover:text-slate-100 transition-colors hover:drop-shadow-[0_0_8px_rgba(14,165,233,0.6)]"
+                    href="#">Services</a>
+                <a class="text-sm font-medium text-slate-400 hover:text-slate-100 transition-colors hover:drop-shadow-[0_0_8px_rgba(14,165,233,0.6)]"
+                    href="#">Projects</a>
+                <a class="text-sm font-medium text-slate-400 hover:text-slate-100 transition-colors hover:drop-shadow-[0_0_8px_rgba(14,165,233,0.6)]"
+                    href="#">Contact</a>
+            </div>
+            <button
+                class="bg-surface-container-highest border border-primary/20 text-primary px-6 py-2 text-sm font-bold tracking-tight hover:border-primary transition-all duration-300 active:scale-95">
+                Get Started
+            </button>
+        </div>
+    </nav>
+    <main class="relative pt-16">
+        <!-- Hero Section -->
+        <section class="relative h-[921px] flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 bg-slate-950">
+                <img alt="Dark moody mountain landscape"
+                    class="w-full h-full object-cover opacity-40 grayscale contrast-125"
+                    data-alt="Moody dark mountain silhouette under night sky"
+                    src="/img/wallpaper.webp" />
+                <div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent"></div>
+                <div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-secondary/10"></div>
+            </div>
+            <div class="relative z-10 text-center px-4 max-w-4xl">
+                <div
+                    class="inline-flex items-center gap-2 mb-6 px-4 py-1 rounded-full bg-surface-container-lowest/50 border border-outline-variant/20 backdrop-blur-sm">
+                    <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+                    <span class="text-[10px] font-label uppercase tracking-[0.2em] text-on-surface-variant">Live System
+                        Active</span>
+                </div>
+                <h1
+                    class="text-6xl md:text-9xl font-headline font-extrabold tracking-tighter text-on-surface mb-8 neon-text-glow">
+                    CREATIVE<br /><span class="text-primary-fixed-dim">CODING</span>
+                </h1>
+                <p class="text-lg md:text-xl font-body text-on-surface-variant max-w-2xl mx-auto leading-relaxed mb-10">
+                    Architecting digital experiences through the lens of aesthetic precision and synthetic logic.
+                </p>
+                <div class="flex flex-col md:flex-row gap-4 justify-center">
+                    <button
+                        class="px-8 py-4 bg-primary text-on-primary font-bold tracking-tight hover:brightness-110 transition-all">
+                        Launch Project
+                    </button>
+                    <button
+                        class="px-8 py-4 border border-outline-variant/30 text-on-surface font-bold tracking-tight hover:bg-surface-container-high transition-all">
+                        View Archive
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- Featured Content (3 Cards) -->
+        <section class="relative py-32 px-6 max-w-[1600px] mx-auto">
+            <div class="grid grid-cols-1 xl:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="glass-morphism group relative p-px overflow-hidden rounded-xl">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent opacity-50 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <div class="relative h-full p-8 flex flex-col gap-6">
+                        <div class="h-[400px] xl:h-300 rounded-lg">
+                            <img alt="Digital Art"
+                                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-00"
+                                data-alt="Abstract colorful digital art wave forms"
+                                src="/img/wallpaper.webp" />
+                        </div>
+                        <div>
+                            <span
+                                class="font-label text-xs uppercase tracking-widest text-primary mb-2 block">Curation_01</span>
+                            <h3 class="text-2xl font-headline font-bold text-on-surface mb-3">Neural Aesthetics</h3>
+                            <p class="text-sm text-on-surface-variant leading-relaxed">Exploring the intersection of
+                                artificial intelligence and traditional composition rules.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="glass-morphism group relative p-px overflow-hidden rounded-xl">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-secondary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <div class="relative h-full p-8 flex flex-col gap-6">
+                        <div class="h-[400px] xl:h-300 rounded-lg">
+                            <img alt="Digital Art"
+                                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-00"
+                                data-alt="Abstract colorful digital art wave forms"
+                                src="/img/wallpaper.webp" />
+                        </div>
+                        <div>
+                            <span
+                                class="font-label text-xs uppercase tracking-widest text-secondary mb-2 block">System_02</span>
+                            <h3 class="text-2xl font-headline font-bold text-on-surface mb-3">Silicon Logic</h3>
+                            <p class="text-sm text-on-surface-variant leading-relaxed">Hardware-level optimization for
+                                seamless real-time rendering and data visualization.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="glass-morphism group relative p-px overflow-hidden rounded-xl">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <div class="relative h-full p-8 flex flex-col gap-6">
+                        <div class="h-[400px] xl:h-300 rounded-lg">
+                            <img alt="Digital Art"
+                                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-00"
+                                data-alt="Abstract colorful digital art wave forms"
+                                src="/img/wallpaper.webp" />
+                        </div>
+                        <div>
+                            <span
+                                class="font-label text-xs uppercase tracking-widest text-primary mb-2 block">Logic_03</span>
+                            <h3 class="text-2xl font-headline font-bold text-on-surface mb-3">Fluid Structures</h3>
+                            <p class="text-sm text-on-surface-variant leading-relaxed">Redefining digital boundaries
+                                through dynamic liquid-motion UI patterns.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Full-width Message Section -->
+        <section class="relative py-48 mesh-gradient overflow-hidden">
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[120px]"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/5 rounded-full blur-[120px]"></div>
+            <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
+                <h2 class="text-4xl md:text-7xl font-headline font-bold tracking-tighter leading-tight mb-8">
+                    The horizon isn't a destination. It's a <span class="text-primary-fixed-dim italic">constant
+                        variable</span> in our evolving code.
+                </h2>
+                <div class="w-24 h-px bg-gradient-to-r from-transparent via-primary to-transparent mx-auto"></div>
+            </div>
+        </section>
+        <!-- Main Article Section -->
+        <section class="relative py-32 px-6 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16">
+            <!-- Main Content -->
+            <div class="lg:col-span-8 space-y-12">
+                <div class="aspect-[16/9] overflow-hidden bg-surface-container-low relative group">
+                    <img alt="Satellite Tech"
+                        class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-1000"
+                        data-alt="Digital blue glowing earth from space satellite view"
+                        src="/img/thumbnail1.webp" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-60"></div>
+                </div>
+                <article class="space-y-6">
+                    <h2
+                        class="text-4xl md:text-5xl font-headline font-extrabold tracking-tight text-on-surface leading-none">
+                        Evolution of Computational Aesthetics
+                    </h2>
+                    <p class="text-lg text-on-surface-variant leading-relaxed font-body">
+                        In the synthetic era, the boundary between the organic and the calculated has dissolved. We are
+                        no longer just designing for screens; we are engineering environments that respond to human
+                        intent with the speed of light.
+                    </p>
+                    <p class="text-on-surface-variant leading-relaxed font-body">
+                        The "Midnight Neon" philosophy is not just a palette—it is a functional requirement for
+                        high-performance interfaces. By leveraging depth, luminescence, and negative space, we reduce
+                        cognitive load while maximizing emotional resonance.
+                    </p>
+                    <a class="inline-flex items-center gap-2 text-primary font-label font-bold uppercase tracking-widest text-sm border-b border-primary/30 pb-1 hover:border-primary transition-all"
+                        href="#">
+                        Read Full Thesis
+                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </a>
+                </article>
+            </div>
+            <!-- Sidebar / Newsletter -->
+            <aside class="lg:col-span-4 space-y-12">
+                <!-- Newsletter Sidebar Widget -->
+                <div class="glass-morphism p-8 border border-outline-variant/10 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-10">
+                        <span class="material-symbols-outlined text-6xl">alternate_email</span>
+                    </div>
+                    <div class="relative z-10">
+                        <h4 class="text-xl font-headline font-bold mb-4">Sync With Us</h4>
+                        <p class="text-sm text-on-surface-variant mb-8 leading-relaxed">
+                            Get weekly insights into the synthetic horizon. No noise, just signal.
+                        </p>
+                        <form class="space-y-4">
+                            <div class="relative">
+                                <input
+                                    class="w-full bg-surface-container-lowest border border-outline-variant/20 px-4 py-3 text-sm focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/20 transition-all placeholder:text-on-tertiary-fixed-variant"
+                                    placeholder="terminal@access.com" type="email" />
+                            </div>
+                            <button
+                                class="w-full bg-primary py-3 text-on-primary font-bold tracking-widest text-xs uppercase hover:brightness-110 transition-all"
+                                type="submit">
+                                Establish Link
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <!-- Related Links -->
+                <div class="space-y-6">
+                    <h4 class="font-label text-xs uppercase tracking-[0.3em] text-on-surface-variant px-2">Latest Logs
+                    </h4>
+                    <ul class="space-y-1">
+                        <li>
+                            <a class="block p-4 hover:bg-surface-container-low transition-colors group" href="#">
+                                <span class="text-xs text-primary font-label block mb-1">04.12.24</span>
+                                <span class="text-on-surface group-hover:text-primary transition-colors">Quantum
+                                    Rendering Protocols</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="block p-4 hover:bg-surface-container-low transition-colors group border-t border-outline-variant/10"
+                                href="#">
+                                <span class="text-xs text-primary font-label block mb-1">04.08.24</span>
+                                <span class="text-on-surface group-hover:text-primary transition-colors">The Anthropic
+                                    UI Model</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-slate-950 w-full py-12 border-t border-slate-800/30">
+        <div class="flex flex-col md:flex-row justify-between items-center w-full px-8 max-w-7xl mx-auto gap-6">
+            <div class="text-lg font-bold text-slate-200">
+                SLIDESHOW
+            </div>
+            <div class="flex gap-8">
+                <a class="text-xs uppercase tracking-widest Space Grotesk text-slate-500 hover:text-slate-200 transition-colors opacity-80 hover:opacity-100"
+                    href="#">Privacy Policy</a>
+                <a class="text-xs uppercase tracking-widest Space Grotesk text-slate-500 hover:text-slate-200 transition-colors opacity-80 hover:opacity-100"
+                    href="#">Terms of Service</a>
+                
+                <a class="text-xs uppercase tracking-widest Space Grotesk text-slate-500 hover:text-slate-200 transition-colors opacity-80 hover:opacity-100"
+                    href="#">LinkedIn</a>
+            </div>
+            <div class="text-sm Manrope text-slate-500">
+                © 2024 SLIDESHOW. The Synthetic Horizon.
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
