@@ -52,18 +52,7 @@ Evoluto da V1: Aggiunti stati hover, gradienti (amber-emerald-teal), card con ba
 
 ## **5\. Implementazione Chiave**
 
-## **5.1 Struttura File (Espansa)**
-
-text
-
-* `V2/`  
-* `├── index-2.html (15.7kB, anim classes)`  
-* `├── style.css (Tailwind custom 5.5kB)`  
-* `├── assets/fonts/ (Inter + Kaushan)`  
-* `├── img/thumbnail[1-3].jpg (lazy)`  
-* `└── icons/ (SVG ottimizzati)`
-
-## **5.2 Snippet Codice Trasformativi**
+## **5.1 Snippet Codice Trasformativi**
 
 V1 → V2 Navbar (fixed blur \+ rounded):
 
@@ -78,8 +67,6 @@ xml
 * `</header> [file:43]`
 
 V2 Card Hover Animata:
-
-css
 
 * `article { @apply hover:translate-y-2 group ... shadow-0px_0px_20px_-13px_#000 duration-300; }`  
 * `img { @apply group-hover:scale-110 duration-500; }`  
