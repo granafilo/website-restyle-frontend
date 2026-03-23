@@ -1,21 +1,13 @@
 # **Website Restyle Frontend \- Esercizio 3**
 
-\[ \[ \[
-
 Modernizzazione completa di un sito web datato (2010 → 2026 standards)  
 Da layout table/float obsoleto a landing responsive dark theme con TailwindCSS, mesh gradients, glow effects e scroll-smooth. 
-
-[Live Demo](http://localhost:5173/)
-
- | 
 
 [Repo](https://github.com/granafilo/website-restyle-frontend)
 
 ## **📋 Panoramica Progetto**
 
 Progetto scolastico per restyling sito obsoleto 
-
-[consegna](https://www.perplexity.ai/search/attachments/Dartamento.docx)
 
 .  
 Obiettivi: HTML5 semantico, mobile-first, Lighthouse ≥90, accessibilità WCAG, performance Core Web Vitals.​
@@ -56,21 +48,6 @@ Figma Prototypes:
 | Effects | Mesh-gradients, drop-shadow-glow filter, backdrop-blur |
 | Tools | Figma (prototipi), Vite (dev server), Lighthouse |
 | No JS | Anim pure CSS per performance nativa |
-
-## **📁 Struttura Repo**
-
-text
-
-* `website-restyle-frontend/`  
-* `├── index.html (V3 principale)`  
-* `├── style.css (V1/V2)`  
-* `├── style-3.css (V3 Tailwind custom)`  
-* `├── assets/`  
-* `│   ├── fonts/ (Variable TTF)`  
-* `│   ├── img/ (webp thumbnails)`  
-* `│   └── icons/ (SVG hamburger/cross)`  
-* `├── docs/ (questa README + Lighthouse PDF)`  
-* `└── V0-original/ (index.html + style-2.css)`
 
 ## **🔍 Evoluzione Dettagliata**
 
@@ -118,20 +95,8 @@ bash
 * *`# Apri index.html o usa Vite: npm create vite@latest . -- --template vanilla`*  
 * `npm run dev  # localhost:5173`
 
-## **📄 Documentazione Completa**
-
-Vedi file allegati: Lighthouse PDF, codici sorgente \[file:37-47\].
-
 ## **🙏 Credits & Referenze**
 
 * [TailwindCSS](https://tailwindcss.com/)  
-*  |   
 * [DaisyUI](https://daisyui.com/)  
-*  ​  
-* [Designers Italia Guidelines](https://designers.italia.it/)  
-* ​  
-* Consegna:   
-* [Documento.docx](https://www.perplexity.ai/search/attachments/Dartamento.docx)  
-* ​  
-* 
 
