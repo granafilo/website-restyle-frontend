@@ -39,9 +39,11 @@
   --font-grotesk: "Space Grotesk", sans-serif;
 
   --color-bg: #070D1E;
+  --color-bg-darker: #020617;
   --color-card: #21293F;
   --color-link: #89CEFF;
   --color-text: #BEC8D2;
+  --color-button-off: #64748B;
 
 
   /* Spaziatura: genererà m-gap, p-gap, ecc. */
@@ -50,6 +52,7 @@
   --spacing-15: 15px;
   --spacing-20: 20px;
   --spacing-25: 25px;
+  --spacing-30: 30px;
   --spacing-50: 50px;
   --spacing-75: 75px;
 
@@ -65,8 +68,6 @@
   --text-shadow-glow: 0 0 10px #89ceff80, 0 0 20px #89ceff4d;
 
   --shadow-glow: 0 0 10px #89ceff80, 0 0 20px #89ceff4d;
-
-  --drop-shadow-glow: 0 0 10px #89ceff80, 0 0 20px #89ceff4d;
 }
 
 @layer components {
@@ -109,13 +110,28 @@ html {
   scrollbar-width: thin;
 }
 
-.neon-text-glow {
-  text-shadow: 0 0 10px #89ceff80, 0 0 20px #89ceff4d;
-}
+.drop-shadow-glow {
+    filter: drop-shadow(0 0 10px rgba(137, 206, 255, 0.502)) drop-shadow(0 0 20px rgba(137, 206, 255, 0.302));
+  }
 
 .mesh-gradient {
   background-image:
     radial-gradient(at 0% 0%, rgba(137, 206, 255, 0.15) 0px, transparent 50%),
     radial-gradient(at 100% 0%, rgba(255, 178, 183, 0.1) 0px, transparent 50%),
     radial-gradient(at 100% 100%, rgba(14, 165, 233, 0.15) 0px, transparent 50%);
+}
+
+.mesh-gradient2 {
+  background-image:
+    radial-gradient(at 0% 0%, rgba(161, 255, 137, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(255, 178, 183, 0.1) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(233, 65, 14, 0.15) 0px, transparent 50%);
+}
+
+.mesh-gradient3 {
+  background-image:
+    radial-gradient(at 0% 0%, rgba(255, 137, 137, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(60, 245, 75, 0.1) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(14, 36, 233, 0.15) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(238, 255, 0, 0.15), transparent 50%);
 }

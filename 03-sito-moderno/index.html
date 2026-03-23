@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it" data-theme="dark">
+<html lang="it" data-theme="dark" class="scroll-smooth">
 
 <head>
   <meta charset="UTF-8">
@@ -13,24 +13,24 @@
 
 </head>
 
-<body>
-  <header class="drawer drawer-end">
+<body class="scroll-smooth">
+  <header id="header" class="drawer drawer-end sticky top-0 z-100">
     <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
-    <div class="drawer-content flex flex-col items-center bg-bg">
+    <div class="drawer-content flex flex-col items-center bg-bg-darker">
 
       <!-- Navbar -->
-      <nav class="navbar bg-bg w-full max-w-400">
+      <nav class="navbar p-25 w-full max-w-400">
 
-        <div class="mx-2 flex-1 px-2 font-bold text-25 ">SLIDESHOW</div>
+        <div class="mx-2 flex-1 px-2 font-bold text-25 font-grotesk">CREATIVE CODING</div>
         <div class="hidden flex-none lg:flex lg:flex-row gap-15 h-full items-center">
           <!-- Navbar menu content here -->
-          <a class="navbar-link">
+          <a class="navbar-link" href="#heroSection">
             <span class="active-link">Home</span>
           </a>
-          <a class="navbar-link">
-            <span>Highlighted Content</span>
+          <a class="navbar-link" href="#highlightedSection">
+            <span>Courses</span>
           </a>
-          <a class="navbar-link">
+          <a class="navbar-link" href="#newsSection">
             <span>News</span>
           </a>
 
@@ -65,50 +65,80 @@
 
           </label>
         </div>
-        <a href="" class="active-link drawer-link navbar-link">Home</a>
-        <a href="" class="drawer-link navbar-link">Highlighted Content</a>
-        <a href="" class="drawer-link navbar-link">News</a>
+        <a href="#heroSection" class="active-link drawer-link navbar-link">Home</a>
+        <a href="#highlightedSection" class="drawer-link navbar-link">Courses</a>
+        <a href="#newsSection" class="drawer-link navbar-link">News</a>
       </div>
   </header>
 
   <main>
     <!-- hero section -->
-    <section class="relative h-225 flex items-center justify-center">
+    <section id="heroSection" class="relative h-225 flex items-center justify-center">
       <div class="absolute inset-0 ">
         <img class="object-cover object-center h-full w-full grayscale opacity-40" src="/img/wallpaper.webp" alt="">
         <div class="absolute inset-0 bg-gradient-to-t  from-bg via-bg/40 to-transparent "></div>
-        <div class="absolute inset-0 bg-gradient-to-br from-link/10 via-transparent to-secondary/10  "></div>
+        <div class="absolute inset-0 bg-gradient-to-br from-link/10 via-transparent to-secondary/10 "></div>
       </div>
       <div class="z-10 text-center">
-        <h1 class="text-6xl md:text-9xl font-extrabold tracking-tighter mb-8 text-shadow-glow">
+        <h1 class="text-6xl md:text-9xl font-grotesk font-extrabold tracking-tighter mb-8 text-shadow-glow ">
           CREATIVE<br /><span class="text-link">CODING</span>
         </h1>
+        <button class="btn bg-link h-auto text-bg cursor-pointer hover:brightness-110 animate-bounce">
+          <a class="w-full h-full text-20 py-15 px-20 font-semibold" href="#highlightedSection">
+            Scopri i Corsi
+          </a>
+        </button>
       </div>
     </section>
 
     <!-- Highlighted content -->
-    <section class="w-full px-50 py-75 bg-bg">
+    <section id="highlightedSection" class="w-full px-50 py-[100px] bg-gradient-to-b from-bg to-link/10">
       <div class="max-w-400 mx-auto flex flex-col justify-center items-center gap-50">
-        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">CONTENUTI IN EVIDENZA</h1>
+        <h1
+          class="text-3xl md:text-4xl lg:text-5xl font-bold font-grotesk text-primary hover:text-shadow-glow transition-all duration-300">
+          CORSI IN EVIDENZA</h1>
         <!-- card wrapper -->
-        <div class=" w-full flex flex-col lg:flex-row gap-25">
+        <div class=" w-full flex flex-col xl:flex-row gap-25">
           <!-- card -->
-
           <div class="relative p-25 group rounded-[10px] flex flex-col gap-25 w-full bg-card">
             <div
               class="absolute inset-0 mesh-gradient opacity-0 group-hover:opacity-100 transition-all duration-300 z-0">
             </div>
 
             <img
-              class="max-h-100 grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
-              src="/img/thumbnail1.webp" alt="">
+              class="max-h-100 xl:h-80 object-cover grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+              src="/img/html-course.webp" alt="">
             <!-- card-content -->
-            <div class="w-full h-full flex flex-col justify-between gap-15 z-10">
-              <h3 class="text-4xl font-bold text-primary">Titolo</h3>
-              <p class="text-text line-clamp-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam eaque
-                voluptatum
-                dolorum enim cupiditate. Necessitatibus exercitationem quia illo nemo laborum dicta dolore vitae iure
-                architecto?</p>
+            <div class=" flex-1 w-full h-full flex flex-col justify-between gap-15 z-10">
+              <h3 class="text-4xl font-bold text-primary">HTML & CSS Moderni</h3>
+              <p class="text-text line-clamp-3">Impara a creare siti web responsive da zero con HTML5 e CSS3. Progetti
+                pratici per portfolio professionale in 4 settimane. Ideale per principianti</p>
+              <button class="w-full btn bg-bg border-0 text-link stroke-link hover:text-shadow-glow font-grotesk ">READ
+                MORE
+
+                <svg class="fill-link" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"
+                  width="28px" stroke-width="1.5" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                </svg>
+
+              </button>
+            </div>
+          </div>
+
+          <div class="relative p-25 group rounded-[10px] flex flex-col gap-25 w-full bg-card">
+            <div
+              class="absolute inset-0 mesh-gradient2 opacity-0 group-hover:opacity-100 transition-all duration-300 z-0">
+            </div>
+
+            <img
+              class="max-h-100 xl:h-80 w-full object-cover grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+              src="/img/javascript-course.jpg" alt="">
+            <!-- card-content -->
+            <div class="flex-1 w-full h-full flex flex-col justify-between gap-15 z-10">
+              <h3 class="text-4xl font-bold text-primary">JavaScript Essenziale
+              </h3>
+              <p class="text-text line-clamp-3">Domina JavaScript per rendere i siti interattivi: animazioni, form
+                dinamici e API. Lezioni hands-on con esercizi reali per sviluppatori junior</p>
               <button class="w-full btn bg-bg border-0 text-link stroke-link hover:text-shadow-glow font-grotesk ">READ
                 MORE
 
@@ -122,45 +152,17 @@
           </div>
           <div class="relative p-25 group rounded-[10px] flex flex-col gap-25 w-full bg-card">
             <div
-              class="absolute inset-0 mesh-gradient opacity-0 group-hover:opacity-100 transition-all duration-300 z-0">
+              class="absolute inset-0 mesh-gradient3 opacity-0 group-hover:opacity-100 transition-all duration-300 z-0">
             </div>
 
             <img
-              class="max-h-100 grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
-              src="/img/thumbnail2.webp" alt="">
+              class="max-h-100 xl:h-80  object-cover grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+              src="/img/python-course.jpg" alt="">
             <!-- card-content -->
-            <div class="w-full h-full flex flex-col justify-between gap-15 z-10">
-              <h3 class="text-4xl font-bold text-primary">Titolo</h3>
-              <p class="text-text line-clamp-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam eaque
-                voluptatum
-                dolorum enim cupiditate. Necessitatibus exercitationem quia illo nemo laborum dicta dolore vitae iure
-                architecto?</p>
-              <button class="w-full btn bg-bg border-0 text-link stroke-link hover:text-shadow-glow font-grotesk ">READ
-                MORE
-
-                <svg class="fill-link" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"
-                  width="28px" stroke-width="1.5" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
-                </svg>
-
-              </button>
-            </div>
-          </div>
-          <div class="relative p-25 group rounded-[10px] flex flex-col gap-25 w-full bg-card">
-            <div
-              class="absolute inset-0 mesh-gradient opacity-0 group-hover:opacity-100 transition-all duration-300 z-0">
-            </div>
-
-            <img
-              class="max-h-100 grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
-              src="/img/thumbnail3.webp" alt="">
-            <!-- card-content -->
-            <div class="w-full h-full flex flex-col justify-between gap-15 z-10">
-              <h3 class="text-4xl font-bold text-primary">Titolo</h3>
-              <p class="text-text line-clamp-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam eaque
-                voluptatum
-                dolorum enim cupiditate. Necessitatibus exercitationem quia illo nemo laborum dicta dolore vitae iure
-                architecto?</p>
+            <div class="flex-1 w-full h-full flex flex-col justify-end gap-15 z-10">
+              <h3 class="text-4xl font-bold text-primary">Python per Automation</h3>
+              <p class="text-text line-clamp-3 ">Automatizza compiti quotidiani con Python: script, web scraping e bot
+                Telegram. Dal principiante al livello pro con progetti personali in 6 settimane</p>
               <button class="w-full btn bg-bg border-0 text-link stroke-link hover:text-shadow-glow font-grotesk ">READ
                 MORE
 
@@ -183,30 +185,54 @@
     <!-- messaggio a tutta larghezza -->
     <section class="w-full px-50 py-[100px] md:py-[150px] lg:py-[200px] mesh-gradient flex flex-col gap-25">
       <div class="max-w-400 mx-auto">
-        <h1 class="text-primary text-center text-4xl md:text-5xl lg:text-6xl font-semibold">Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Voluptates fuga, <span class="text-link italic">sed laborum accusantium quas
-            consectetur nihil minima atque</span>, architecto earum, qui optio vel quibusdam veritatis?</h1>
+        <h1 class="text-primary text-center text-4xl md:text-5xl lg:text-6xl font-semibold flex flex-col gap-15">
+          <span class="text-3xl">Masterizza il codice. Costruisci il domani.</span>
+          <span class="text-link italic font-grotesk">Il tuo viaggio nel coding inizia qui.</span>
+        </h1>
+      </div>
+      <div class="flex justify-center ">
+        <button
+          class="rounded-[5px] px-30 py-15 w-auto bg-link/30 hover:bg-link hover:text-black transition-all duration-500 font-grotesk text-white cursor-pointer font-bold tracking-wider drop-shadow-glow">
+          INIZIA ORA
+        </button>
       </div>
       <div class="w-[25%] h-px bg-gradient-to-r from-transparent via-link to-transparent mx-auto"></div>
     </section>
 
-    <section class="w-full px-50 py-[100px] md:py-[150px] lg:py-[200px] bg-bg flex flex-col lg:flex-row gap-25">
+    <section id="newsSection"
+      class="w-full px-50 py-[100px] md:py-[150px] lg:py-[200px] bg-bg flex flex-col lg:flex-row gap-25">
       <!-- article card -->
       <div class="max-w-400  mx-auto flex flex-col lg:flex-row items-start justify-start gap-50">
         <div class="w-full lg:w-8/12 flex flex-col items-start justify-start gap-50">
-          <img class="h-[450px] w-full aspect-video object-cover" src="/img/wallpaper.webp" alt="">
-          <h1 class="text-primary text-center text-4xl md:text-5xl lg:text-6xl font-extrabold">TITOLO ARTICOLO</h1>
+          <img class="h-[450px] w-full aspect-video object-cover" src="/img/article-hero.jpg" alt="">
+          <h1 class="text-primary  text-4xl md:text-5xl lg:text-6xl font-extrabold">Come Creare il Tuo Primo Bot
+            Telegram con Python</h1>
+          <p class="text-[14px]">23 Mar 2026 - 8 min read - Python, Automation, Bot</p>
           <p class="text-text">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, nam. Aliquam nisi a, esse ullam deleniti
-            praesentium, fugiat voluptates in quos quisquam illo ea impedit. Nihil deleniti molestias ex adipisci
-            tenetur
-            possimus sequi molestiae officia aliquam. Nihil quasi voluptatum quos facere, aliquid ab maiores iusto
-            eveniet
-            consequatur quia hic voluptatibus.
+            Creare un bot Telegram personalizzato è più semplice di quanto pensi, anche se parti da zero con Python. In
+            questa guida completa ti mostro come configurare il tuo primo bot usando la libreria python-telegram-bot,
+            ricevere comandi, inviare risposte automatiche e integrarlo con servizi esterni come Google Sheets per
+            tracciare spese o attività quotidiane.
+            <br><br>
+
+            Immagina di avere un assistente che ti ricorda appuntamenti, registra transazioni bancarie o invia report
+            personalizzati - tutto via chat, senza app extra. Partiamo dalle basi: registri il bot su BotFather, ottieni
+            il token API, e in 20 righe di codice hai già un "Ciao mondo!" funzionante.
+            <br><br>
+
+
+            Poi passiamo al pratico: gestisci comandi /start, /help, risposte inline, gestione errori e deployment
+            gratuito su Heroku o Replit. Bonus: regex per validare input e webhook per performance pro.
+
+            <br><br>
+
+            Perfetto per chi vuole automatizzare la vita quotidiana senza complicazioni. Al termine del tutorial avrai
+            un bot deployato e pronto all'uso, con codice scaricabile. Tempo stimato: 2 ore. Inizia oggi e rendi
+            Telegram il tuo hub personale!
           </p>
           <button
             class="font-grotesk text-link flex items-center border-b border-link/10 hover:border-link hover:text-shadow-glow cursor-pointer transition-all duration-300">
-            READ FULL THESIS
+            READ FULL ARTICLE
             <svg class="fill-link" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"
               width="28px" stroke-width="1.5" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
@@ -214,14 +240,16 @@
           </button>
         </div>
         <!-- sidebar card -->
-        <div class="w-full lg:max-w-4/12 flex flex-col ">
+        <div class="w-full lg:max-w-4/12 flex flex-col gap-50">
           <div class="bg-card p-25 flex flex-col gap-25">
             <div class="flex flex-col gap-15">
-              <h3 class="text-primary font-semibold text-20">Sync with us</h3>
-              <p class="text-text text-15">Get weekly insights into the synthetic horizon. No noise, just signal.</p>
+              <h3 class="text-primary font-semibold text-20">Unisciti alla nostra newsletter</h3>
+              <p class="text-text text-15">
+                Ricevi guide gratuite su Python, Tailwind e automation. No spam, solo codice utile settimanale
+              </p>
             </div>
-            <form class="w-full">
-              <label class="input validator w-full">
+            <form class="w-full flex flex-col gap-25">
+              <label class="input validator w-full h-auto p-4  border-none!">
                 <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                   <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none"
                     stroke="currentColor">
@@ -229,12 +257,31 @@
                     <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
                   </g>
                 </svg>
-                <input type="email" class="w-full" placeholder="access@site.com" required />
+                <input type="email" class="w-full hover:border-none!" placeholder="access@site.com" required />
               </label>
               <div class="validator-hint hidden">Enter valid email address</div>
-              <button class="w-full btn"></button>
-
+              <button class="w-full btn font-grotesk text-bg bg-link hover:brightness-110 " type="submit">
+                Inizia a
+                Ricevere Tips
+              </button>
             </form>
+
+          </div>
+          <div class="px-10 text-text font-grotesk text-15 tracking-widest flex flex-col gap-25 items-center">
+            <h4 class="flex w-full justify-start font-grotesk">LATEST LOGS</h4>
+            <!-- news card -->
+            <div class="w-full flex flex-col items-start">
+              <div class="w-full flex flex-col items-start hover:bg-card p-10  text-[14px] cursor-pointer">
+                <h6 class="font-grotesk text-link ">13.03.26</h6>
+                <p class="font-sans text-white">Javascript Tips</p>
+                <div class="w-full h-px mt-5 bg-gradient-to-r from-transparent via-link to-transparent"></div>
+              </div>
+              <div class="w-full flex flex-col items-start hover:bg-card p-10 text-[14px] cursor-pointer">
+                <h6 class="font-grotesk text-link ">04.03.26</h6>
+                <p class="font-sans text-white ">Python per Web</p>
+                <div class="w-full h-px mt-5 bg-gradient-to-r from-transparent via-link to-transparent"></div>
+              </div>
+            </div>
 
           </div>
         </div>
@@ -242,6 +289,20 @@
     </section>
 
   </main>
+
+  <footer class="p-75 bg-bg-darker ">
+    <div class="max-w-400 mx-auto flex flex-col lg:flex-row items-center lg:justify-between gap-15">
+      <div class="text-primary font-bold text-25 font-grotesk">
+        CREATIVE CODING
+      </div>
+      <div class="flex gap-25 text-button-off font-medium">
+        <div class="hover:text-white cursor-pointer">PRIVACY POLICY</div>
+        <div class="hover:text-white cursor-pointer">TERMS OF SERVICE</div>
+        <div class="hover:text-white cursor-pointer">LINKEDIN</div>
+      </div>
+      <div class="text-button-off font-medium">© 2026 CREATIVE CODING. The Synthetic Horizon.</div>
+    </div>
+  </footer>
 </body>
 
 </html>
