@@ -1,53 +1,137 @@
-# Modern Responsive Landing Page
+# **Website Restyle Frontend \- Esercizio 3**
 
-Una landing page ad alta fedeltà sviluppata per dimostrare la padronanza delle architetture CSS moderne, dei layout asimmetrici e del framework Tailwind CSS v4. 
+\[ \[ \[
 
-Il progetto nasce dal refactoring di un layout legacy (basato su float e larghezze fisse) ed è stato interamente riscritto seguendo l'approccio **Mobile-First**, garantendo performance, accessibilità e un codice altamente manutenibile (D.R.Y.).
+Modernizzazione completa di un sito web datato (2010 → 2026 standards)  
+Da layout table/float obsoleto a landing responsive dark theme con TailwindCSS, mesh gradients, glow effects e scroll-smooth. 
 
-## Tecnologie Utilizzate
+[Live Demo](http://localhost:5173/)
 
-* **HTML5 Semantico**
-* **Tailwind CSS v4** (Utility-first framework)
-* **DaisyUI** (Componenti UI in puro CSS)
-* **Vite** (Build tool e dev server)
+ | 
 
-## Funzionalità Principali
+[Repo](https://github.com/granafilo/website-restyle-frontend)
 
-* **100% Responsive:** Layout fluido che si adatta a qualsiasi dispositivo (Mobile, Tablet, Desktop).
-* **Zero JavaScript per l'UI:** Elementi interattivi complessi come il Drawer (menu laterale off-canvas) sono gestiti esclusivamente tramite HTML e CSS grazie a DaisyUI, garantendo zero render-blocking e massima velocità.
-* **Layout Asimmetrico Avanzato:** Utilizzo combinato di CSS Grid e Flexbox per gestire il reflow dei contenuti (es. inversione dell'ordine tra immagine e titolo su dispositivi mobili rispetto al desktop) senza duplicare l'HTML.
-* **Design System Custom:** Implementazione di un tema personalizzato tramite la direttiva `@theme` di Tailwind v4, estraendo spaziature, colori e border-radius in variabili globali.
-* **Componenti D.R.Y.:** Isolamento degli stili ricorrenti (card, bottoni, tipografia) nel `@layer components` del CSS, mantenendo il DOM pulito e scalabile.
+## **📋 Panoramica Progetto**
 
-* **Performance & SEO Ottimizzate:** Punteggi Lighthouse massimizzati prestando attenzione ai Core Web Vitals. Compressione asset in formato WebP, prevenzione del CLS (tramite dimensioni esplicite), priorità di caricamento strategica (`fetchpriority` e `lazy loading`), file `robots.txt` per il crawling e minificazione spinta di CSS/JS tramite build di produzione.
+Progetto scolastico per restyling sito obsoleto 
 
-## Installazione e Utilizzo (Local Development)
+[consegna](https://www.perplexity.ai/search/attachments/Dartamento.docx)
 
-Per far girare questo progetto in locale sul tuo computer, assicurati di avere [Node.js](https://nodejs.org/) installato.
+.  
+Obiettivi: HTML5 semantico, mobile-first, Lighthouse ≥90, accessibilità WCAG, performance Core Web Vitals.​
 
-1. **Clona il repository:**
-   `git clone https://github.com/granafilo/website-restyle-fronted.git`
+| Fase | Punteggio | Focus | Lighthouse Perf. |
+| :---- | :---- | :---- | :---- |
+| V0 (Originale) | \- | Table layout, jQuery slider ​ | \<50 stimato |
+| V1 | 20/20 | HTML semantico responsive ​ | 90 ​ |
+| V2 | 30/30 | UI/UX Figma \+ anim hover ​ | 87 ​ |
+| V3 (Finale) | 50/50 | Dark theme, mesh-glow, scroll-smooth ​ | 91 ​ |
 
-2. **Entra nella directory del progetto:**
-   `cd NOME-REPO`
+Figma Prototypes: 
 
-3. **Installa le dipendenze:**
-   `npm install`
+[V1](https://www.figma.com/design/MmpR0q8JFtwcEK6LyHS7Zf/Esercizio-3-V1)
 
-4. **Avvia il server di sviluppo (Vite):**
-   `npm run dev`
+ | 
 
-*Il progetto sarà visibile all'indirizzo `http://localhost:5173` (o la porta indicata nel terminale).*
+[V2](https://www.figma.com/design/SuVcHYQFU8FGxN2SmAKqS5/Esercizio_3-V2)
 
-## Scelte Architetturali
+ | 
 
-Questo progetto è stato costruito per essere scalabile. Invece di abusare delle utility class direttamente nell'HTML, il CSS è stato strutturato in modo intelligente:
+[V3](https://www.figma.com/design/XausdV5gdMplWiwRySSMvY/Esercizio_3-V3)
 
-* **Sfondi vs Contenitori:** È stato creato un sistema a doppia classe (`.section-wrapper` per gli sfondi full-width e `.container-1200` per ingabbiare i contenuti), risolvendo i classici problemi di overflow sugli schermi ultrawide.
-* **Single Source of Truth:** La tipografia principale è gestita da classi come `.heading-primary`, permettendo di aggiornare il design system da un unico file CSS.
-* **Gestione Immagini:** Utilizzo di `aspect-ratio` e `object-cover` per garantire crop uniformi indipendentemente dal formato originale della foto.
+## **🚀 Caratteristiche V3 Finale**
 
-## Autore
+* Design System: Manrope \+ Space Grotesk fonts, dark theme DaisyUI, custom CSS vars (20+).  
+* Visual Polish: Mesh radial gradients (3 varianti), text-shadow-glow, hover:scale-110 \+ translate.  
+* UX: Scroll-smooth, fixed navbar blur, anchor navigation (\#heroSection).  
+* Performance: FCP 0.8s, CLS 0.002, no JS blocking.​  
+* Responsive: Mobile → 2xl (max-w-400), drawer sidebar.
 
-Sviluppato da **Filippo Granata** come progetto scolastico.
-* **LinkedIn:** www.linkedin.com/in/filippo-granata04
+## **🛠 Tech Stack**
+
+| Categoria | Tecnologie |
+| :---- | :---- |
+| HTML/CSS | HTML5 semantico, TailwindCSS \+ DaisyUI (dark theme) |
+| Fonts | Manrope (body), Space Grotesk (headings) Variable ​ |
+| Effects | Mesh-gradients, drop-shadow-glow filter, backdrop-blur |
+| Tools | Figma (prototipi), Vite (dev server), Lighthouse |
+| No JS | Anim pure CSS per performance nativa |
+
+## **📁 Struttura Repo**
+
+text
+
+* `website-restyle-frontend/`  
+* `├── index.html (V3 principale)`  
+* `├── style.css (V1/V2)`  
+* `├── style-3.css (V3 Tailwind custom)`  
+* `├── assets/`  
+* `│   ├── fonts/ (Variable TTF)`  
+* `│   ├── img/ (webp thumbnails)`  
+* `│   └── icons/ (SVG hamburger/cross)`  
+* `├── docs/ (questa README + Lighthouse PDF)`  
+* `└── V0-original/ (index.html + style-2.css)`
+
+## **🔍 Evoluzione Dettagliata**
+
+## **Da V0 → V1: Semantica \+ Responsive**
+
+* Problemi V0: Float layout 960px fisso, jQuery 1.7.  
+* Fix: Flex/Grid, viewport meta, drawer mobile.  
+* Guadagno: Lighthouse 90 Perf., TBT 0ms.​
+
+## **Da V1 → V2: UI/UX \+ Anim**
+
+* Aggiunte: Backdrop-blur navbar, hover shadows, gradient btn.  
+* Figma: Stati hover, spacing 25px system.  
+* Lighthouse: 87 Perf. (CLS 0.01).​
+
+## **Da V2 → V3: Pro Dark Theme**
+
+* Polish: Mesh-gradients (radial cyan-pink), glow \#89CEFF, scroll-smooth.​  
+* Contenuti: Sezioni corsi/news tematici coding (HTML/JS/Python).  
+* Top: FCP 0.8s, Perf. 91.​
+
+## **📊 Metriche Lighthouse Progressive**
+
+| Versione | Perf. | Access. | Best Pr. | SEO | FCP/LCP |
+| :---- | :---- | :---- | :---- | :---- | :---- |
+| V1 ​ | 90 | 89 | 96 | 100 | 1.1s/1.7s |
+| V2 ​ | 87 | 85 | 96 | 100 | 1.3s/1.9s |
+| V3 ​ | 91 | 80 | 96 | 100 | 0.8s/1.8s |
+
+Todo: Image width/height espliciti, contrast fixes.
+
+## **⚠️ Problemi Risolti & Lezioni**
+
+* Float → Modern CSS: Flex/Grid \+ Tailwind utility 10x più veloce.  
+* Performance: Lazy img \+ no JS → Core Web Vitals green.  
+* Dark Mode: Native DaisyUI → futuro-proof.  
+  Tempo totale: \~30h (10h/fase).
+
+## **🚀 Setup Locale**
+
+bash
+
+* `git clone https://github.com/granafilo/website-restyle-frontend.git`  
+* `cd website-restyle-frontend`  
+* *`# Apri index.html o usa Vite: npm create vite@latest . -- --template vanilla`*  
+* `npm run dev  # localhost:5173`
+
+## **📄 Documentazione Completa**
+
+Vedi file allegati: Lighthouse PDF, codici sorgente \[file:37-47\].
+
+## **🙏 Credits & Referenze**
+
+* [TailwindCSS](https://tailwindcss.com/)  
+*  |   
+* [DaisyUI](https://daisyui.com/)  
+*  ​  
+* [Designers Italia Guidelines](https://designers.italia.it/)  
+* ​  
+* Consegna:   
+* [Documento.docx](https://www.perplexity.ai/search/attachments/Dartamento.docx)  
+* ​  
+* 
+
