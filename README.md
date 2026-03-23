@@ -1,102 +1,102 @@
-# **Website Restyle Frontend \- Esercizio 3**
+# **Website Restyle Frontend \- Esercizio 3 (Vite \+ Multi-Branch)**
 
-Modernizzazione completa di un sito web datato (2010 → 2026 standards)  
-Da layout table/float obsoleto a landing responsive dark theme con TailwindCSS, mesh gradients, glow effects e scroll-smooth. 
+\[\]\[lighthouse\] \[\!\[Accessibility-80-orange.svg)\]\[lighthouse\] \[\!\[SEO-100-brightgreen.svg)\]\[lighthouse\]
+
+Restyle evolutivo: V0 obsoleto → V3 dark/mesh 2026\.
 
 [Repo](https://github.com/granafilo/website-restyle-frontend)
 
-## **📋 Panoramica Progetto**
+## **🚀 Setup Vite (Ogni Branch)**
 
-Progetto scolastico per restyling sito obsoleto 
-
-.  
-Obiettivi: HTML5 semantico, mobile-first, Lighthouse ≥90, accessibilità WCAG, performance Core Web Vitals.​
-
-| Fase | Punteggio | Focus | Lighthouse Perf. |
-| :---- | :---- | :---- | :---- |
-| V0 (Originale) | \- | Table layout, jQuery slider ​ | \<50 stimato |
-| V1 | 20/20 | HTML semantico responsive ​ | 90 ​ |
-| V2 | 30/30 | UI/UX Figma \+ anim hover ​ | 87 ​ |
-| V3 (Finale) | 50/50 | Dark theme, mesh-glow, scroll-smooth ​ | 91 ​ |
-
-Figma Prototypes: 
-
-[V1](https://www.figma.com/design/MmpR0q8JFtwcEK6LyHS7Zf/Esercizio-3-V1)
-
- | 
-
-[V2](https://www.figma.com/design/SuVcHYQFU8FGxN2SmAKqS5/Esercizio_3-V2)
-
- | 
-
-[V3](https://www.figma.com/design/XausdV5gdMplWiwRySSMvY/Esercizio_3-V3)
-
-## **🚀 Caratteristiche V3 Finale**
-
-* Design System: Manrope \+ Space Grotesk fonts, dark theme DaisyUI, custom CSS vars (20+).  
-* Visual Polish: Mesh radial gradients (3 varianti), text-shadow-glow, hover:scale-110 \+ translate.  
-* UX: Scroll-smooth, fixed navbar blur, anchor navigation (\#heroSection).  
-* Performance: FCP 0.8s, CLS 0.002, no JS blocking.​  
-* Responsive: Mobile → 2xl (max-w-400), drawer sidebar.
-
-## **🛠 Tech Stack**
-
-| Categoria | Tecnologie |
-| :---- | :---- |
-| HTML/CSS | HTML5 semantico, TailwindCSS \+ DaisyUI (dark theme) |
-| Fonts | Manrope (body), Space Grotesk (headings) Variable ​ |
-| Effects | Mesh-gradients, drop-shadow-glow filter, backdrop-blur |
-| Tools | Figma (prototipi), Vite (dev server), Lighthouse |
-| No JS | Anim pure CSS per performance nativa |
-
-## **🔍 Evoluzione Dettagliata**
-
-## **Da V0 → V1: Semantica \+ Responsive**
-
-* Problemi V0: Float layout 960px fisso, jQuery 1.7.  
-* Fix: Flex/Grid, viewport meta, drawer mobile.  
-* Guadagno: Lighthouse 90 Perf., TBT 0ms.​
-
-## **Da V1 → V2: UI/UX \+ Anim**
-
-* Aggiunte: Backdrop-blur navbar, hover shadows, gradient btn.  
-* Figma: Stati hover, spacing 25px system.  
-* Lighthouse: 87 Perf. (CLS 0.01).​
-
-## **Da V2 → V3: Pro Dark Theme**
-
-* Polish: Mesh-gradients (radial cyan-pink), glow \#89CEFF, scroll-smooth.​  
-* Contenuti: Sezioni corsi/news tematici coding (HTML/JS/Python).  
-* Top: FCP 0.8s, Perf. 91.​
-
-## **📊 Metriche Lighthouse Progressive**
-
-| Versione | Perf. | Access. | Best Pr. | SEO | FCP/LCP |
-| :---- | :---- | :---- | :---- | :---- | :---- |
-| V1 ​ | 90 | 89 | 96 | 100 | 1.1s/1.7s |
-| V2 ​ | 87 | 85 | 96 | 100 | 1.3s/1.9s |
-| V3 ​ | 91 | 80 | 96 | 100 | 0.8s/1.8s |
-
-Todo: Image width/height espliciti, contrast fixes.
-
-## **⚠️ Problemi Risolti & Lezioni**
-
-* Float → Modern CSS: Flex/Grid \+ Tailwind utility 10x più veloce.  
-* Performance: Lazy img \+ no JS → Core Web Vitals green.  
-* Dark Mode: Native DaisyUI → futuro-proof.  
-  Tempo totale: \~30h (10h/fase).
-
-## **🚀 Setup Locale**
-
-bash
 
 * `git clone https://github.com/granafilo/website-restyle-frontend.git`  
-* `cd website-restyle-frontend`  
-* *`# Apri index.html o usa Vite: npm create vite@latest . -- --template vanilla`*  
-* `npm run dev  # localhost:5173`
+* `cd 03-sito-moderno`
+* `npm install`  
+* `npm run dev  # Versione del branch corrente`
 
-## **🙏 Credits & Referenze**
+## **📂 Distribuzione Versioni (Branch \+ Cartelle 01/02/03)**
 
-* [TailwindCSS](https://tailwindcss.com/)  
-* [DaisyUI](https://daisyui.com/)  
+Branch Git mantengono struttura Vite completa per fase:
+
+| Versione | Branch/Tag | Lighthouse | Accesso |
+| :---- | :---- | :---- | :---- |
+| V0 | \- | \<50 | ​ |
+| V1 | fix-v1 / v1 |  90 ​ | git checkout fix-v1 |
+| V2 | fix-v2 / v2 |  87 ​ | git checkout fix-v2 |
+| V3 | master | 91 ​ | git checkout master |
+
+## **🎮 Testa Versioni Passo-Passo**
+
+
+* *`# 1. V3 (main - raccomandato)`*  
+* `git checkout master`  
+* `cd 03-sito-moderno`
+* `npm run dev  # localhost:5173 → Dark theme mesh-glow`  
+*   
+* *`# 2. V2`*  
+* `git checkout fix-v2` 
+* `cd 03-sito-moderno` 
+* `npm run dev  # UI Figma + hover animation`  
+*   
+* *`# 3. V1`*  
+* `git checkout fix-v1`  
+* `cd 03-sito-moderno`
+* `npm run dev  # HTML semantico responsive`
+
+## **🌳 Git Flow Attuale (Corretto\!)**
+
+
+
+* `main ── 03-moderno/ ── V3 FINAL (Tailwind dark)`  
+*  `│`  
+*  `├─ fix-v2  ── V2 (UI/anim)`  
+*  `│`  
+*  `└─ fix-v1  ── V1 (HTML5)`
+
+Comandi:
+
+
+* `git branch -a              # Lista branch`  
+* `git log --oneline --graph  # Evoluzione`  
+* `git diff v1..main          # Cambiamenti totali`
+
+## **📊 Metriche Evolutive**
+
+| Versione | Perf. | FCP | Note Cartella |
+| :---- | :---- | :---- | :---- |
+| V1 (01/) | 90 | 1.1s | Semantico puro |
+| V2 (02/) | 87 | 1.3s | Figma \+ CSS |
+| V3 (03/) | 91 | 0.8s | Mesh \+ dark |
+
+## **🛠 Stack per Fase (03-moderno/main)**
+
+
+
+* `Vite + Tailwind + DaisyUI dark`  
+* `Manrope/Space Grotesk fonts`  
+* `CSS: mesh-gradients, glow-shadows`  
+* `No JS: Pure anim performance`
+
+## **🚀 Deploy (main/03-moderno)**
+
+
+
+* `npm run build → dist/`  
+* `GitHub Pages: main branch`  
+* `Netlify: Drag dist/ → live V3`
+
+## **📈 Versionamento Spiegato**
+
+* master: V3 live   
+* fix-v1: V1 completa   
+* fix-v2: V2 intermedia  
+* Tags v1/v2: Release precise per fase
+
+Pro della tua distribuzione: Ogni branch \= snapshot completo (Vite \+ cartelle consegna). Perfetto per demo fasi\!
+
+## **🙌 Credits**
+
+Filippo Granata – Coding & Automation
+
+
 
