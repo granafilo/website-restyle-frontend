@@ -70,6 +70,10 @@
   --shadow-glow: 0 0 10px #89ceff80, 0 0 20px #89ceff4d;
 }
 
+test{
+  color: #ffb2b7;
+}
+
 @layer components {
 
 

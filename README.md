@@ -1,7 +1,5 @@
 # **Website Restyle Frontend \- Esercizio 3 (Vite \+ Multi-Branch)**
 
-\[\]\[lighthouse\] \[\!\[Accessibility-80-orange.svg)\]\[lighthouse\] \[\!\[SEO-100-brightgreen.svg)\]\[lighthouse\]
-
 Restyle evolutivo: V0 obsoleto → V3 dark/mesh 2026\.
 
 [Repo](https://github.com/granafilo/website-restyle-frontend)
@@ -32,7 +30,7 @@ Branch Git mantengono struttura Vite completa per fase:
 * `git checkout master`  
 * `cd 03-sito-moderno`
 * `npm run dev  # localhost:5173 → Dark theme mesh-glow`  
-*   
+
 * *`# 2. V2`*  
 * `git checkout fix-v2` 
 * `cd 03-sito-moderno` 
@@ -53,12 +51,6 @@ Branch Git mantengono struttura Vite completa per fase:
 *  `│`  
 *  `└─ fix-v1  ── V1 (HTML5)`
 
-Comandi:
-
-
-* `git branch -a              # Lista branch`  
-* `git log --oneline --graph  # Evoluzione`  
-* `git diff v1..main          # Cambiamenti totali`
 
 ## **📊 Metriche Evolutive**
 
@@ -70,20 +62,10 @@ Comandi:
 
 ## **🛠 Stack per Fase (03-moderno/main)**
 
-
-
 * `Vite + Tailwind + DaisyUI dark`  
 * `Manrope/Space Grotesk fonts`  
 * `CSS: mesh-gradients, glow-shadows`  
 * `No JS: Pure anim performance`
-
-## **🚀 Deploy (main/03-moderno)**
-
-
-
-* `npm run build → dist/`  
-* `GitHub Pages: main branch`  
-* `Netlify: Drag dist/ → live V3`
 
 ## **📈 Versionamento Spiegato**
 
@@ -98,5 +80,6 @@ Pro della tua distribuzione: Ogni branch \= snapshot completo (Vite \+ cartelle 
 
 Filippo Granata – Coding & Automation
 
-
-
+<div>
+<img src="/V3.png">
+</div>

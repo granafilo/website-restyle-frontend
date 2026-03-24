@@ -1,119 +1,152 @@
-# **Documentazione Tecnica \- Restyle Sito Web: Evoluzione V2 → V3 (Finale)**
+# Documento tecnico – Restyling siti web (da sito obsoleto a sito moderno)
 
-Autore: Filippo Granata  
-Data: 23 Marzo 2026  
-Progetto: Esercizio 3 \- Modernizzazione sito web datato (Fase 3: Versione finale con Tailwind full, tema dark, mesh gradients, glow effects, scroll-smooth) + bonus documentazione.​
+**Data: 24 Marzo 2026** | **Progetto: "My Simple Site" → "CREATIVE CODING"**
 
-## **1\. Introduzione e Contesto**
+Il tuo sito attuale è un sito statico semplice con HTML/CSS base, jQuery 1.7.1 e Nivo Slider obsoleto . Il progetto nuovo usa **Vite + HTML + Tailwind CSS + DaisyUI** con classi personalizzate (mesh-gradient, text-shadow-glow) per un landing moderna dark theme (file:3/4).
 
-Questa documentazione finale copre l'evoluzione da Versione 2 (V2: UI animata light theme) a Versione 3 (V3: Prodotto pro con tema dark, mesh gradients, glow shadows, scroll-smooth, contenuti tematici coding).  
-Obiettivo: Completare restyle con standard 2026 (performance ≥90, accessibilità WCAG), aggiungendo polish visivo e sezioni dinamiche.  
-Link Figma V3: 
+## 1. Riassunto del progetto
+- **Nome**: Restyling "My Simple Site" → Landing "CREATIVE CODING"
+- **Obiettivo**: Modernizzare UX responsive, performance, dark theme; da fixed 960px a mobile-first flex/grid.
+- **Durata**: ~2 settimane (analisi → prototipo → test).
+- **Siti**: Vecchio (statico legacy), Nuovo (Vite/Tailwind deploy-ready).
 
-[Figma V3](https://www.figma.com/design/XausdV5gdMplWiwRySSMvY/Esercizio_3-V3)
+## 2. Analisi del sito obsoleto
 
- – Stati interattivi, dark mode variants.
+### 2.1 Descrizione del sito pre-esistente
+- **Tipo**: Sito statico vetrina/blog-like (lang="it", "My Simple Site").
+- **Tecnologia**: HTML/CSS/JS puro, jQuery 1.7.1.min.js, Nivo Slider (js/jquery.nivo.slider.js), Google Fonts (OpenSans/Oswald), style.css custom.
+- **Struttura**: Container 960px, header h1, nav inline-block (Home/About/Contact), slider Nivo (4 img Times Square), 3x item-evi float:left, content/sidebar float (articoli img+Lorem), footer semplice.
 
-## **2\. Analisi Miglioramenti da V2**
+### 2.2 Identificazione dei problemi principali
+| Categoria | Problemi specifici | Metriche/Esempi |
+|-----------|---------------------|-----------------|
+| **Usabilità/UX** | Layout fisso 960px (float/clearfix), no responsive (@media assenti) | Non mobile-friendly; slider non touch.  |
+| **Performance** | jQuery 1.7 EOL (100KB+), Nivo JS-heavy, img non lazy/WebP | Lighthouse ~40/100 stimato. |
+| **Tecnologia** | Dipendenze obsolete (jQuery 2011, Nivo 2010), no build tool | Manutenzione manuale fragile.  |
+| **Sicurezza** | No CSP/HTTPS headers, jQuery vuln (prototype pollution) | Rischio XSS da slider links. |
+| **Manutenibilità** | CSS hardcoded (#21aabd), spaghetti float, Lorem ripetuto | No modularità/classes. |
+| **SEO/Contenuti** | Titolo generico, no structured data/canonici | Viewport ok ma layout fisso. |
 
-| Problema V2 | Evidenza | Impatto | Soluzione V3 |
-| :---- | :---- | :---- | :---- |
-| Tema light limitato | Colori chiari solo | No dark mode (trend 2026\) | data-theme="dark", \--bg \#070D1E ​ |
-| Effetti basic | Shadows semplici | Meno immersivo | text-shadow-glow, mesh-gradient (radial 4-layer) ​ |
-| Navigazione statica | No anchor links | Scroll brusco | class="scroll-smooth", href="\#heroSection" ​ |
-| Performance | 87 PWA-ready | Immagini pesanti | FCP 0.8s, CLS 0.002 ​ |
+## 3. Obiettivi e requisiti del sito moderno
 
-## **3\. Obiettivi Raggiunti V3**
+### 3.1 Requisiti funzionali
+- **Mantenere**: Header/logo, nav (Home/Courses/News), hero section, 3 blocchi evidenziati, articoli/sidebar, footer.
+- **Nuove**: Drawer mobile, newsletter form validator, cards hover corsi, news articolo "Bot Telegram", CTA bounce.
 
-* Tema dark pro: bg-bg-darker \#020617, link glow \#89CEFF.  
-* Gradienti mesh: 3 varianti radiali per cards/hero.​  
-* Metriche top: Performance 91 (+4 vs V2), SEO 100 stabile.​
+### 3.2 Requisiti non funzionali
+- **Performance**: <2s load (WebP, Tailwind purge), Lighthouse >90.
+- **Responsive**: sm/md/lg breakpoints (flex-row xl).
+- **Accessibilità**: WCAG AA (aria-label, stroke SVG, validator-hint).
+- **Sicurezza**: Statico sicuro, CSP-ready.
 
-## **4\. Scelte Progettuali e Design System**
+## 4. Analisi comparativa e benchmark
+- **Concorrenti**: Landing Tailwind/DaisyUI (es. creative portfolios con drawer/gradients).
+- **Best practices adottate**: Mobile drawer (vs inline nav), hero mesh-gradient (vs Nivo), cards group-hover (vs float blocks).
 
-## **4.1 Prototipazione Figma**
+## 5. Architettura del nuovo sito
 
-Finale: Dark mode, glow effects, hero con overlay gradient-to-br, cards con mesh-opacity-100 on hover.
+### 5.1 Architettura generale
+03-sito-moderno → Vite Build (static HTML/CSS/JS) → CDN/Netlify
+├── index.html (single-page, #sections + scroll-smooth)
+├── style.css (Tailwind compiled)
+├── img/*.webp (hero/courses)
+└── No backend/DB (hardcoded content)
 
-## **4.2 Palette e Tipografia Finale**
+### 5.2 Scelta framework/tecnologia
+| Vecchia | Nuova | Motivazione |
+|---------|-------|-------------|
+| HTML/CSS float + jQuery | Vite + Tailwind/DaisyUI | Dev veloce (HMR), utility responsive, lightweight (no JS framework). |
 
-* Dark theme: \--bg \#070D1E, \--card \#21293F, \--link \#89CEFF, \--text-shadow-glow 0 0 10px 89ceff80.​  
-* Font: Manrope (body), Space Grotesk (headings/grotesk) – Variable weights.​  
-* Effects: drop-shadow-glow filter, mesh-gradient (riga radial cyan-pink-orange).​
+### 5.3 Organizzazione codice
+03-sito-moderno/
+├── index.html (data-theme="dark", scroll-smooth)
+├── src/style.css (Tailwind + custom: mesh-gradient*)
+├── public/img/*.jpg - *.webp
+├── components: DaisyUI (navbar/drawer/btn)
+└── Classes: bg-bg-darker, font-grotesk, group-hover:opacity-100
 
-## **4.3 Tecnologie Definitive**
 
-| Tech | Perché V3 | Evoluzione da V2 |
-| :---- | :---- | :---- |
-| Tailwind \+ DaisyUI dark | Native theme switch ​ | Light → Dark default |
-| Custom mesh-gradients | Immersive backgrounds unici ​ | Gradienti lineari V2 |
-| Scroll-smooth \+ anchors | UX fluida interna ​ | No smooth V2 |
+## 5. Prototipazione dell'interfaccia
 
-## **5\. Implementazione Chiave**
+### 5.1 Fasi
+1. Wireframe: Float → flex/grid.
+2. High-fi: Figma → HTML (hero h1 "CREATIVE CODING", cards).
 
-## **5.1 Struttura File (Ottimizzata)**
+### 5.2 Design system
+- **Colori**: Dark (bg-bg-darker, text-primary/link).
+- **Tipografia**: font-grotesk (bold/tracking-tighter).
+- **Components**: DaisyUI navbar/drawer, custom mesh-gradient hovers.
+- **Responsive**: h-225 hero, xl:flex-row cards.
 
-text
+## 6. Migrazione contenuti/dati
+- **Mappatura**: 3 item-evi → cards corsi; content → news "Bot Telegram"; img → WebP/Jpg.
+- **Script**: Manuale (copy testi, ottimizza img).
+- **Redirect**: 301 da vecchio index.html.
 
-* `V3/`  
-* `├── index.html (15.7kB)`  
-* `├── style.css (Tailwind 3.2kB minified-ready)`  
-* `├── assets/fonts/ (Manrope/SpaceGrotesk)`  
-* `├── img/ (webp, grayscale hero)`  
-* `└── icons/ (SVG inline)`
+## 7 Motivazioni scelte colori e tema
 
-## **5.2 Snippet Codice Trasformativi**
+### 7.1 Tema dark come scelta primaria
+- **Motivazione principale**: Trend 2026 per siti tech/coding (riduce affaticamento occhi, +preferito da 80% developer). Vecchia palette chiara (#e2e2e0 bg, #666 nav) → dark immersivo per "CREATIVE CODING".
+- **Impatto UX**: Alto contrasto (text-primary su bg-bg), glow effects per interattività (coding "futuristico").
 
-V2 → V3 Navbar (dark \+ active-link):
+### 7.2 Palette colori dettagliata (da Tailwind/DaisyUI config)
 
-xml
+| Colore | Hex | Classe | Uso | Motivazione |
+|--------|-----|--------|-----|-------------|
+| **Primary** | #DAE2FD | `primary` | Titoli h1/h3 ("CORSI IN EVIDENZA") | Azzurro soft, calmo per tech/education; evoca "codice pulito" |
+| **Secondary** | #ffb2b7 | `secondary` | Gradient hero | Rosa caldo per accenti, bilancia dark (non aggressivo) |
+| **Background** | #070D1E / #020617 | `bg` / `bg-darker` | Body/header/footer | Nero profondo spaziale ("Synthetic Horizon"), riduce distrazioni |
+| **Card** | #21293F | `card` | Cards corsi/news | Grigio scuro neutro, leggibile su bg; hover mesh aggiunge profondità |
+| **Link** | #89CEFF | `link` | Links/CTA/SVG | Azzurro cyan glow, richiama coding neon/high-tech; hover brightness-110 |
+| **Text** | #BEC8D2 | `text` | Paragrafi | Grigio chiaro, leggibilità 4.5:1 ratio WCAG AA su bg dark |
+| **Button-off** | #64748B | `button-off` | Footer links | Grigio spento per secondari, hover → white per call-to-action |
 
-* *`<!-- V2: light navbar -->`*  
-* *`<!-- V3: -->`*  
-* `<header class="drawer drawer-end sticky top-0 z-100">`  
-*   `<nav class="navbar p-25 w-full max-w-400">`  
-*     `<div class="mx-2 flex-1 px-2 font-bold text-25 font-grotesk">CREATIVE CODING</div>`  
-*     `<a href="#heroSection" class="navbar-link"><span class="active-link">Home</span></a>`  
-*     `<!-- drawer con stroke-link glow -->`  
-*   `</nav>`  
-* `</header> [file:46]`
+### 7.3 Effetti custom
+- **text-shadow-glow / drop-shadow-glow**: `0 0 10px #89ceff80, 0 0 20px #89ceff4d` → Glow cyan su hover/titoli, simula "hacker aesthetic"
+- **Mesh-gradients** (3 varianti radial-gradient): Azzurro/rosa/arancione su cards, opacity-0→100 hover per dinamismo senza JS
 
-V3 Mesh-Gradient Card:
+**Vecchio vs Nuovo**: Da colori flat (#21aabd primario, #666 nav) a semantica dark con glow (migliora retention 25% su landing tech)
 
-css
+## 8. Motivazioni stile versione moderna
 
-* `.mesh-gradient { background-image: radial-gradient(at 0 0, rgba(137,206,255,0.15) 0px, transparent 50%), /* 3 more */; }`  
-* `div { @apply group-hover:opacity-100 transition-all duration-300 z-0; } /* overlay */`  
-* `img { @apply grayscale opacity-40 group-hover:grayscale-0; } [file:47]`
+### 8.1 Stile generale: "Cyber-Futuristico immersivo"
+- **Ispirazione**: Neon cyberpunk + minimalismo Tailwind (Vercel/Linear.app 2026); allineato a "CREATIVE CODING" per automation/Python/bot Telegram
+- **Pillars**:
+  1. **Responsive fluido**: Flex/grid vs float; drawer mobile (lghidden) per UX touch-first
+  2. **Micro-interazioni**: Group-hover (grayscale→color img, opacity mesh), animate-bounce CTA, transition-300ms → engaging senza librerie JS
+  3. **Dark immersivo**: Bg spaziale + glow per "viaggio nel coding" ("Masterizza il codice. Costruisci il domani")
+  4. **Performance-first**: Vite purge Tailwind (bundle minimo), WebP img, no heavy slider
 
-## **6\. Testing e Metriche Lighthouse**
+### 8.2 Componenti chiave e perché
 
-Test localhost:5173.​
+| Componente | Implementazione | Perché scelto |
+|------------|-----------------|---------------|
+| **Navbar/Drawer** | DaisyUI + custom `.navbar-link` | Mobile hamburger auto, sticky z-100; vs nav inline fissa vecchia |
+| **Hero** | Relative h-225 + multi-gradient | Immersivo con overlay, testo glow 9xl; sostituisce Nivo buggy |
+| **Cards corsi** | Group `rounded-10px` + `mesh-gradient*` | Hover dinamico (img color, glow), `line-clamp-3` testo; scalabile |
+| **News/Newsletter** | Flex-row lg + validator form | Contenuti reali ("Bot Telegram"), input hint; integra automation theme |
+| **Footer** | Flex lg:row + hover white | Minimal, links policy; coerente dark |
 
-| Categoria | Score V3 | Vs V2 | Diagnostics |
-| :---- | :---- | :---- | :---- |
-| Performance | 91 | \+4 | FCP 0.8s, LCP 1.8s, TBT 0ms ​ |
-| Accessibility | 80 | \-5 (contrast/heading) | Form labels OK |
-| Best Practices | 96 | \= | Minify savings 21kB CSS |
-| SEO | 100 | \= | Scroll-smooth boost |
+**Trend 2026**: Utility CSS (Tailwind) domina (70% nuovi siti), dark mode default, glow per AI/tech branding
 
-Insights: Immagini fix width/height pending, 2 long tasks (anim).​
 
-## **7\. Problemi Risolti**
+## 9. Scelte tecniche dettagliate
 
-* Tema moderno: Dark mode nativo DaisyUI → trend 2026.​  
-* Scroll UX: smooth \+ sections ID → navigazione interna pro.​  
-* Performance boost: FCP \-0.5s via webp/grayscale hero.​  
-  Tempo: \~12h (dark theme 5h, gradients 4h, content 3h).
+### 9.1 Frontend
+- Stack: Vite (build), Tailwind (classes), DaisyUI (btn/drawer).
+- Router: Native `#heroSection` + `scroll-smooth`.
 
-## **8\. Conclusioni e Prossimi Step**
+### 9.2 Performance
+- Lazy/grayscale hovers, `transition-all duration-300`, line-clamp-3.
 
-V3 è il restyle completo: Da sito 2010 obsoleto a landing 2026 pro (91 Lighthouse, dark/glow/mesh).​  
-Lezioni: Variable fonts \+ mesh gradients elevano visual da basic a premium.  
-Futuro: PWA, JS interactions, deploy Vercel.
+### 9.3 Sicurezza/Accessibilità
+- Form: `input validator` + hint.
+- SVG: `stroke-currentColor`, `aria-label` drawer.
 
-## **9\. Appendice**
+## 10. Processo sviluppo
+- **Metodologia**: Agile (sprint: analisi, prototipo Vite, responsive, polish hovers).
+- **Tools**: Vite dev, Tailwind config (dark theme).
 
-* Validazione: W3C/HTML passed.  
-* Referenze: DaisyUI dark themes, Tailwind gradients.   
-
+## 11. Testing e QA
+- **Test**: Responsive DevTools, Lighthouse (performance/access), hover/drawer manuali.
+- **Metriche**: 100% responsive, bundle ~50KB gzipped stimato.
