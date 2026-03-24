@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="it" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/src/style.css" rel="stylesheet">
+
+  <title>slideshow - Landing Page</title>
+  <meta name="description" content="Landing page modernizzata di un sito obsoleto">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- header -->
+  <header class="fixed top-25 drawer drawer-end z-100">
+    <input id="sidebar" type="checkbox" class="drawer-toggle" />
+
+    <!-- Navbar -->
+    <div class="drawer-content flex flex-col items-center px-25">
+
+      <div class="navbar section-wrapper w-full px-25 py-5 bg-white/60 backdrop-blur-md rounded-full max-w-[1600px]">
+
+        <div class="flex justify-between items-center w-full h-full">
+
+          <div class="flex-1 w-full">
+            <h1 class="navbar-title">
+              SLIDESHOW</h1>
+          </div>
+
+          <div class="flex-none md:hidden">
+            <label for="sidebar" aria-label="open sidebar" class="utility-btn">
+              <img width="36" height="36" src="./icons/menu-hamburger.svg" alt="">
+            </label>
+          </div>
+
+          <div class="hidden md:flex justify-center items-center ">
+            <div class="container-1200 px-0 items-center gap-25 flex ">
+              <div class="navbar-btn">
+                HOME
+              </div>
+              <div class="navbar-btn">
+                ABOUT
+              </div>
+              <div class="navbar-btn">
+                CONTACT
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- sidebar verticale -->
+    <div class="drawer-side z-50">
+      <label for="sidebar" aria-label="close sidebar" class="drawer-overlay"></label>
+
+      <ul class="menu bg-surface min-h-full w-80 p-4 text-white gap-25">
+        <div class="flex w-full justify-end">
+          <label for="sidebar" aria-label="close sidebar" class="utility-btn">
+            <img width="36" height="36" src="./icons/cross.svg" alt="" aria-label="close sidebar">
+          </label>
+        </div>
+
+        <!-- Sidebar content here -->
+        <li><a class="sidebar-btn">Home</a></li>
+        <li><a class="sidebar-btn"> About</a></li>
+        <li><a class="sidebar-btn">Contact</a></li>
+
+      </ul>
+    </div>
+  </header>
+
+  <!-- main content -->
+  <main>
+    <!-- slider -->
+    <section class="section-wrapper border-b border-b-text/10">
+      <div class="max-h-[75vh] section-wrapper object-fit">
+        <img class="w-full object-cover" src="./img/wallpaper.jpg" alt="">
+      </div>
+    </section>
+
+    <!-- Highlighted content -->
+    <section class="section-wrapper  bg-surface border-b border-b-text/10">
+
+      <div
+        class="max-w-400 container-1200 py-25 my-25 gap-25 grid grid-cols-1 2xl:grid-cols-[repeat(auto-fit,minmax(400px,1fr))]">
+
+        <!-- hightlighted card -->
+        <article
+          class="section-wrapper hover:-translate-y-2 group w-auto flex-col bg-surface  rounded-25 gap-25 shadow-[0px_0px_20px_-13px_#000000] duration-300">
+          <div class="overflow-hidden h-full self-stretch shrink rounded-t-25">
+            <img class="object-cover w-full h-auto xl:h-full rounded-t-25 group-hover:scale-110 duration-500" src="/img/thumbnail1.jpg" alt=""
+              loading="lazy">
+          </div>
+          <div class="flex flex-col p-25 gap-25 justify-between h-full">
+            <div class="flex flex-col gap-25">
+              <div class="heading-primary">CONTENUTO IN EVIDENZA</div>
+              <div class="line-clamp-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
+                aspernatur,
+                tempore odit dignissimos aliquam at dolorum inventore modi, sit vero dolores quos? Ex tenetur accusamus
+                velit
+                culpa officiis vero unde provident! At repudiandae magni nulla ea architecto, asperiores ad ipsa unde
+                debitis
+                doloribus quas tenetur maxime, rerum voluptate ipsum minima?</div>
+            </div>
+            <div class="show-content-btn">
+              SHOW CONTENT
+            </div>
+          </div>
+        </article>
+
+        <!-- hightlighted card -->
+        <article
+          class="section-wrapper hover:-translate-y-2 group w-auto flex-col bg-surface  rounded-25 gap-25 shadow-[0px_0px_20px_-13px_#000000] duration-300">
+          <div class="overflow-hidden h-full self-stretch shrink rounded-t-25">
+            <img class="object-cover w-full h-auto xl:h-full rounded-t-25 group-hover:scale-110 duration-500" src="/img/thumbnail2.jpg" alt=""
+              loading="lazy">
+          </div>
+          <div class="flex flex-col p-25 gap-25 justify-between h-full">
+            <div class="flex flex-col gap-25">
+              <div class="heading-primary">CONTENUTO IN EVIDENZA</div>
+              <div class="line-clamp-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
+                aspernatur,
+                tempore odit dignissimos aliquam at dolorum inventore modi, sit vero dolores quos? Ex tenetur accusamus
+                velit
+                culpa officiis vero unde provident! At repudiandae magni nulla ea architecto, asperiores ad ipsa unde
+                debitis
+                doloribus quas tenetur maxime, rerum voluptate ipsum minima?</div>
+            </div>
+            <div class="show-content-btn">
+              SHOW CONTENT
+            </div>
+        </article>
+
+        <!-- hightlighted card -->
+        <article
+          class="section-wrapper hover:-translate-y-2 group w-auto flex-col bg-surface  rounded-25 gap-25 shadow-[0px_0px_20px_-13px_#000000] duration-300">
+          <div class="overflow-hidden h-full self-stretch shrink rounded-t-25">
+            <img class="object-cover w-full h-auto xl:h-full rounded-t-25 group-hover:scale-110 duration-500" src="/img/thumbnail3.jpg" alt=""
+              loading="lazy">
+          </div>
+          <div class="flex flex-col p-25 gap-25 justify-between h-full">
+            <div class="flex flex-col gap-25">
+              <div class="heading-primary">CONTENUTO IN EVIDENZA</div>
+              <div class="line-clamp-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
+                aspernatur,
+                tempore odit dignissimos aliquam at dolorum inventore modi, sit vero dolores quos? Ex tenetur accusamus
+                velit
+                culpa officiis vero unde provident! At repudiandae magni nulla ea architecto, asperiores ad ipsa unde
+                debitis
+                doloribus quas tenetur maxime, rerum voluptate ipsum minima?</div>
+            </div>
+            <div class="show-content-btn">
+              SHOW CONTENT
+            </div>
+          </div>
+        </article>
+      </div>
+
+
+
+    </section>
+
+
+    <!-- full width msg -->
+    <section class="section-wrapper background-gradient border-b border-b-text/10">
+      <div
+        class="container-1200 max-w-[1600px] py-25 my-25 text-center text-4xl 2xl:text-6xl font-bold font-[Kaushan_Script]">
+        QUESTO SPAZIO È DEDICATO AD ANNUNCI IMPORTANTI
+      </div>
+    </section>
+
+    <!-- sezione articoli e link sidebar -->
+    <!-- background-image: linear-gradient( 90.6deg,  rgba(251,229,210,1) 18.9%, rgba(217,240,235,1) 39.5%, rgba(208,239,238,1) 51.1%, rgba(219,242,240,1) 62.1%, rgba(233,240,217,1) 84.1% ); -->
+    <!-- <div class="bg-[linear-gradient(to_right,theme(colors.amber.200/1),theme(colors.emerald.100/1),theme(colors.teal.100/1),theme(colors.teal.50/1),theme(colors.lime.100/1))]"> -->
+
+    <section class="section-wrapper  py-12.5 bg-surface">
+
+      <!-- wrapper articoli e sidebar -->
+      <div class="max-w-[1600px] flex flex-col xl:flex-row gap-25">
+        <div class="flex-1 container-1200 h-auto flex flex-col  justify-center gap-25">
+          <!-- wrapper card -->
+          <article
+            class="rounded-25! section-wrapper w-auto flex-col xl:flex-row bg-[#FBF6F6] gap-25 max-h-180 hover:shadow-[0px_0px_20px_-13px_#000000] group duration-500">
+
+            <!-- container immagine card -->
+            <div class="xl:w-[45%]! xl:min-w-[45%] xl:max-w-[45%] overflow-hidden h-full self-stretch shrink rounded-t-25 xl:rounded-t-none xl:rounded-s-25!">
+              <img class="object-cover w-full h-auto xl:h-full rounded-t-25 xl:rounded-t-none xl:rounded-s-25! group-hover:scale-110 duration-500"
+                src="/img/thumbnail3.jpg" alt="" loading="lazy">
+            </div>
+
+            <!-- container contenuto -->
+            <div class=" flex flex-col p-25 gap-25 justify-between backdrop-blur-md rounded-25">
+              <div class="flex flex-col gap-25">
+                <div class="heading-primary">CONTENUTO IN EVIDENZA</div>
+                <div class="line-clamp-10 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
+                  aspernatur,
+                  tempore odit dignissimos aliquam at dolorum inventore modi, sit vero dolores quos? Ex tenetur
+                  accusamus
+                  velit
+                  culpa officiis vero unde provident! At repudiandae magni nulla ea architecto, asperiores ad ipsa unde
+                  debitis
+                  doloribus quas tenetur maxime, rerum voluptate ipsum minima?</div>
+              </div>
+              <div class="show-content-btn border-none">
+                SHOW CONTENT
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="rounded-25! section-wrapper w-auto flex-col xl:flex-row bg-[#FBF6F6] gap-25 max-h-180 hover:shadow-[0px_0px_20px_-13px_#000000] group duration-500">
+
+            <!-- container immagine card -->
+            <div class="xl:w-[45%]! xl:min-w-[45%] xl:max-w-[45%] overflow-hidden h-full self-stretch shrink rounded-t-25 xl:rounded-t-none xl:rounded-s-25!">
+              <img class="object-cover w-full h-auto xl:h-full rounded-t-25 xl:rounded-t-none xl:rounded-s-25! group-hover:scale-110 duration-500"
+                src="/img/thumbnail1.jpg" alt="" loading="lazy">
+            </div>
+
+            <!-- container contenuto -->
+            <div class=" flex flex-col p-25 gap-25 justify-between backdrop-blur-md rounded-25">
+              <div class="flex flex-col gap-25">
+                <div class="heading-primary">CONTENUTO IN EVIDENZA</div>
+                <div class="line-clamp-10 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
+                  aspernatur,
+                  tempore odit dignissimos aliquam at dolorum inventore modi, sit vero dolores quos? Ex tenetur
+                  accusamus
+                  velit
+                  culpa officiis vero unde provident! At repudiandae magni nulla ea architecto, asperiores ad ipsa unde
+                  debitis
+                  doloribus quas tenetur maxime, rerum voluptate ipsum minima?</div>
+              </div>
+              <div class="show-content-btn border-none">
+                SHOW CONTENT
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- SIDEBAR -->
+        <div class="px-25 min-w-[150px] w-full xl:w-[30%] ">
+          <aside
+            class="list  p-25 rounded-25 bg-white/60 w-full  gap-25 items-center shadow-[0px_0px_20px_-13px_#000000]">
+            <h3 class="heading-primary text-[45px]">SIDEBAR</h3>
+            <div class="link-btn gradient-btn hover:-translate-y-0.5"><a href="">MY LINK</a></div>
+            <div class="link-btn gradient-btn hover:-translate-y-0.5"><a href="">MY LINK</a></div>
+            <div class="link-btn gradient-btn hover:-translate-y-0.5"><a href="">MY LINK</a></div>
+            <div class="link-btn gradient-btn hover:-translate-y-0.5"><a href="">MY LINK</a></div>
+            <div class="link-btn gradient-btn hover:-translate-y-0.5"><a href="">MY LINK</a></div>
+            <div class="link-btn gradient-btn hover:-translate-y-0.5"><a href="">MY LINK</a></div>
+          </aside>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- info section -->
+    <!-- <section class="section-wrapper flex-col items-center bg-verde-scuro">
+      <div class="container-1200 my-25 gap-25 flex flex-col items-center">
+        <div class="section-wrapper py-25 border-b-4 border-b-beige-chiaro">
+          <img width="40" height="40" src="./icons/info.svg" alt="">
+        </div>
+        <div class="section-wrapper flex-col py-25 gap-25">
+          <div class="info-card-title">INFO</div>
+          <div class="text-beige-chiaro ">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, voluptatibus obcaecati odit fuga placeat
+            alias quo sapiente ab reiciendis praesentium perferendis! Commodi optio, veritatis omnis ipsa, aut molestias
+            minus deleniti illo earum accusamus cupiditate ut vel molestiae praesentium expedita id perferendis alias
+            placeat temporibus iure quod culpa laboriosam, vero facilis.
+          </div>
+        </div>
+        <div class="section-wrapper flex-col py-25 gap-25">
+          <div class="info-card-title">INFO</div>
+          <div class="text-beige-chiaro ">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, voluptatibus obcaecati odit fuga placeat
+            alias quo sapiente ab reiciendis praesentium perferendis! Commodi optio, veritatis omnis ipsa, aut molestias
+            minus deleniti illo earum accusamus cupiditate ut vel molestiae praesentium expedita id perferendis alias
+            placeat temporibus iure quod culpa laboriosam, vero facilis.
+          </div>
+        </div>
+        <div class="section-wrapper flex-col py-25 gap-25">
+          <div class="info-card-title">INFO</div>
+          <div class="text-beige-chiaro ">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, voluptatibus obcaecati odit fuga placeat
+            alias quo sapiente ab reiciendis praesentium perferendis! Commodi optio, veritatis omnis ipsa, aut molestias
+            minus deleniti illo earum accusamus cupiditate ut vel molestiae praesentium expedita id perferendis alias
+            placeat temporibus iure quod culpa laboriosam, vero facilis.
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+  </main>
+
+  <!-- footer -->
+  <footer class="flex background-gradient text-base-content p-25 justify-center">
+    <div class="max-w-400 footer sm:footer-horizontal px-25">
+      <aside>
+        <p >
+          Made by
+          <span class="footer-title opacity-100 text-text">FILIPPO GRANATA</span>
+        </p>
+      </aside>
+      <nav>
+        <h6 class="footer-title opacity-100 text-text">Services</h6>
+        <a class="link link-hover">Branding</a>
+        <a class="link link-hover">Design</a>
+        <a class="link link-hover">Marketing</a>
+        <a class="link link-hover">Advertisement</a>
+      </nav>
+      <nav>
+        <h6 class="footer-title opacity-100 text-text">Company</h6>
+        <a class="link link-hover">About us</a>
+        <a class="link link-hover">Contact</a>
+        <a class="link link-hover">Jobs</a>
+        <a class="link link-hover">Press kit</a>
+      </nav>
+      <nav>
+        <h6 class="footer-title opacity-100 text-text">Legal</h6>
+        <a class="link link-hover">Terms of use</a>
+        <a class="link link-hover">Privacy policy</a>
+        <a class="link link-hover">Cookie policy</a>
+      </nav>
+    </div>
+  </footer>
+
+
+
+  <script src="./src/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="it" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/src/style.css" rel="stylesheet">
+
+  <title>slideshow - Landing Page</title>
+  <meta name="description" content="Landing page modernizzata di un sito obsoleto">
+</head>
+
+<body>
+
+  <!-- header -->
+  <header class="drawer drawer-end sticky top-0">
+    <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
+
+    <!-- Navbar -->
+    <div class="drawer-content flex flex-col">
+
+
+      <!-- Title Row -->
+      <div class="navbar section-wrapper sticky top-0 z-30 bg-verde-chiaro backdrop-blur-md">
+        <div class="container-1200 flex justify-between h-full items-center ">
+          <h1
+            class="flex-1 flex text-2xl font-bold text-verde-scuro truncate tracking-tight w-full lg:justify-center lg:text-5xl">
+            SLIDESHOW</h1>
+          <div class="flex-none lg:hidden">
+            <label for="my-drawer-2" aria-label="open sidebar" class="btn btn-square btn-ghost">
+              <img width="36" height="36" src="./icons/menu-hamburger.svg" alt="">
+
+            </label>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- navbar orizzontale -->
+      <div class="hidden lg:flex justify-center w-full bg-white items-center border-b border-verde-scuro/10">
+        <div class="container-1200 py-25 items-center gap-25  grid grid-cols-3 ">
+          <div
+            class="active flex justify-center btn bg-beige-chiaro rounded-25 text-[24px] hover:shadow hover:shadow-[0px_0px_10px_0px_#000000]">
+            HOME</div>
+          <div
+            class="flex justify-center btn bg-beige-chiaro rounded-25 text-[24px] hover:shadow hover:shadow-[0px_0px_10px_0px_#000000]">
+            ABOUT</div>
+          <div
+            class="flex justify-center btn bg-beige-chiaro rounded-25 text-[24px] hover:shadow hover:shadow-[0px_0px_10px_0px_#000000]">
+            CONTACT</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- sidebar verticale -->
+    <div class="drawer-side z-50">
+      <label for="my-drawer-2" aria-label="close sidebar" class="drawer-overlay"></label>
+
+      <ul class="menu bg-verde-scuro min-h-full w-80 p-4 text-white ">
+        <div class="flex w-full justify-end">
+          <label for="my-drawer-2" aria-label="close sidebar">
+            <img width="48" height="48" src="./icons/cross.svg" alt="" aria-label="close sidebar">
+          </label>
+        </div>
+
+        <!-- Sidebar content here -->
+        <li><a class="text-[24px] font-bold">Home</a></li>
+        <li><a class="text-[24px] font-bold"> About</a></li>
+        <li><a class="text-[24px] font-bold">Contact</a></li>
+
+      </ul>
+    </div>
+  </header>
+
+  <!-- main content -->
+  <main>
+    <!-- slider -->
+    <section class="section-wrapper">
+      <div class="max-h-[800px] section-wrapper py-25 object-fit">
+        <img class="w-full object-cover" src="./img/wallpaper.jpg" alt="">
+      </div>
+    </section>
+
+    <!-- Highlighted content -->
+    <section class="section-wrapper bg-verde-chiaro">
+
+      <div class="container-1200 py-25 my-25 gap-25 flex flex-col lg:flex-row">
+        <div class="highlighted-card hover:scale-[110%] transition-all shadow-xl/30 shadow-black-500/50">
+          <div class="heading-primary">CONTENUTO IN EVIDENZA</div>
+          <div class="py-[15px] ">
+            <img class="rounded-[15px]" src="./img/times-square-traffic.webp" alt="">
+          </div>
+          <div class="">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque maiores autem, deserunt omnis
+            quod, quisquam animi quasi in atque illo consectetur rerum praesentium sapiente ullam?</div>
+
+        </div>
+        <div class="highlighted-card hover:scale-[110%] transition-all shadow-xl/30 shadow-black-500/50">
+          <div class="heading-primary">CONTENUTO IN EVIDENZA</div>
+          <div class="py-[15px] ">
+            <img class="rounded-[15px]" src="./img/times-square-traffic.webp" alt="">
+          </div>
+          <div class="">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque maiores autem, deserunt omnis
+            quod, quisquam animi quasi in atque illo consectetur rerum praesentium sapiente ullam?</div>
+        </div>
+        <div class="highlighted-card hover:scale-[110%]  transition-all shadow-xl/30 shadow-black-500/50">
+          <div class="heading-primary">CONTENUTO IN EVIDENZA</div>
+          <div class="py-[15px] ">
+            <img class="rounded-[15px]" src="./img/times-square-traffic.webp" alt="">
+          </div>
+          <div class="">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque maiores autem, deserunt omnis
+            quod, quisquam animi quasi in atque illo consectetur rerum praesentium sapiente ullam?</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- full width msg -->
+    <section class="section-wrapper">
+      <div class="container-1200 py-25 my-25">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. At quis numquam quas repudiandae eveniet quisquam
+        veniam dolore commodi ex consequatur? Esse blanditiis quod quo dolorem temporibus officiis debitis commodi
+        aliquid, incidunt eveniet itaque. Quidem ex, at perspiciatis atque iusto possimus saepe? Natus facere itaque
+        iusto deserunt distinctio necessitatibus culpa sapiente.
+      </div>
+    </section>
+
+
+    <section class="section-wrapper py-25 lg:bg-verde-chiaro">
+      <!-- wrapper articoli e sidebar -->
+      <div class="container-1200 !px-0  justify-center grid grid-cols-1 lg:grid-cols-3  lg:gap-25">
+        <!-- articolo 1 -->
+        <div class="section-wrapper bg-verde-chiaro lg:col-start-1 lg:col-end-3 lg:row-start-1 lg:row-end-1">
+          <div
+            class="w-full px-25 lg:px-0 py-25 lg:py-0 gap-25 flex flex-col lg:grid lg:grid-cols-[350px_1fr] lg:items-start lg:gap-x-[40px]">
+
+            <div class="lg:order-2 heading-primary">
+              TITOLO ARTICOLO
+            </div>
+
+            <div class="w-full lg:order-1 lg:row-span-2">
+              <div class="overflow-hidden rounded-25 lg:aspect-square lg:aspect-[4/3]">
+                <img width="960" height="380" src="./img/times-square-traffic.webp" alt="Traffico a Times Square"
+                  class="w-full h-full object-cover" loading="lazy">
+              </div>
+            </div>
+
+            <div class="article-content lg:order-3">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium labore veniam omnis autem optio
+              corporis a porro, minus necessitatibus eius, sint repudiandae hic ratione accusamus, repellendus voluptate
+              consequuntur architecto sed laboriosam cum!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus delectus dolor, modi nemo fugiat culpa
+              nihil consectetur, obcaecati fuga aspernatur minus debitis enim natus rem distinctio beatae autem
+              accusantium iste provident sint necessitatibus numquam neque? Voluptate blanditiis, nihil iure, ipsam,
+              corporis deserunt quis modi ad eos debitis eius quibusdam autem natus voluptates repudiandae vel. Qui
+              minima atque nobis iste tempore, autem totam voluptatum est? Numquam officiis odit libero dolore, vel,
+              ipsum id consequuntur modi temporibus ipsam earum. Non corporis blanditiis perspiciatis atque, accusantium
+              cupiditate officia at maiores consequuntur, molestias laudantium eius iusto voluptates consequatur!
+              Commodi, animi iste nihil provident, a hic doloribus architecto maxime deserunt dolorem laudantium sit
+              doloremque, repudiandae expedita repellat saepe dolorum quam exercitationem sint inventore aperiam.
+              Necessitatibus quidem ea adipisci voluptas, illo eveniet voluptates officia quod temporibus earum unde
+              ipsa aut delectus ad? Ipsa animi eligendi sapiente blanditiis fuga unde illum magni mollitia omnis,
+              repellendus ex ab.
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- sidebar -->
+        <div class="section-wrapper sidebar-desktop flex-col items-center">
+          <div class="w-full px-25 lg:px-0  my-25 lg:my-0 gap-25 flex flex-col items-center lg:h-full">
+            <div class="heading-primary">LINK SECTION</div>
+
+            <div class="w-full grid grid-cols-[repeat(auto-fit,_minmax(120px,_1fr))] gap-[10px] lg:grid-cols-1 ">
+              <div class="btn-grid-link">MY LINK</div>
+              <div class="btn-grid-link">MY LINK</div>
+              <div class="btn-grid-link">MY LINK</div>
+              <div class="btn-grid-link">MY LINK</div>
+              <div class="btn-grid-link">MY LINK</div>
+              <div class="btn-grid-link">MY LINK</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- info section -->
+    <section class="section-wrapper flex-col items-center bg-verde-scuro">
+      <div class="container-1200 my-25 gap-25 flex flex-col items-center">
+        <div class="section-wrapper py-25 border-b-4 border-b-beige-chiaro">
+          <img width="40" height="40" src="./icons/info.svg" alt="">
+        </div>
+        <div class="section-wrapper flex-col py-25 gap-25">
+          <div class="info-card-title">INFO</div>
+          <div class="text-beige-chiaro ">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, voluptatibus obcaecati odit fuga placeat
+            alias quo sapiente ab reiciendis praesentium perferendis! Commodi optio, veritatis omnis ipsa, aut molestias
+            minus deleniti illo earum accusamus cupiditate ut vel molestiae praesentium expedita id perferendis alias
+            placeat temporibus iure quod culpa laboriosam, vero facilis.
+          </div>
+        </div>
+        <div class="section-wrapper flex-col py-25 gap-25">
+          <div class="info-card-title">INFO</div>
+          <div class="text-beige-chiaro ">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, voluptatibus obcaecati odit fuga placeat
+            alias quo sapiente ab reiciendis praesentium perferendis! Commodi optio, veritatis omnis ipsa, aut molestias
+            minus deleniti illo earum accusamus cupiditate ut vel molestiae praesentium expedita id perferendis alias
+            placeat temporibus iure quod culpa laboriosam, vero facilis.
+          </div>
+        </div>
+        <div class="section-wrapper flex-col py-25 gap-25">
+          <div class="info-card-title">INFO</div>
+          <div class="text-beige-chiaro ">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, voluptatibus obcaecati odit fuga placeat
+            alias quo sapiente ab reiciendis praesentium perferendis! Commodi optio, veritatis omnis ipsa, aut molestias
+            minus deleniti illo earum accusamus cupiditate ut vel molestiae praesentium expedita id perferendis alias
+            placeat temporibus iure quod culpa laboriosam, vero facilis.
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- footer -->
+  <footer class="footer footer-horizontal footer-center bg-base-200 text-base-content rounded p-10">
+    <nav class="grid grid-flow-col gap-4">
+      <a class="link link-hover">About us</a>
+      <a class="link link-hover">Contact</a>
+      <a class="link link-hover">Jobs</a>
+      <a class="link link-hover">Press kit</a>
+    </nav>
+    <nav>
+      <div class="grid grid-flow-col gap-4">
+        <a target="_blank" href="https://www.facebook.com/">
+          <img width="48" height="48" src="./icons/facebook.svg" alt="Facebook Link">
+        </a>
+        <a target="_blank" href="https://www.linkedin.com/">
+          <img width="48" height="48" src="./icons/linkedin.svg" alt="Linkedin Link">
+        </a>
+        <a target="_blank" href="https://www.instagram.com/">
+          <img width="48" height="48" src="./icons/instagram.svg" alt="Instagram Link">
+        </a>
+      </div>
+    </nav>
+  </footer>
+
+
+
+  <script src="./src/main.js"></script>
+</body>
+
+</html>
