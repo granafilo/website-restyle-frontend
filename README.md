@@ -74,6 +74,10 @@ Prerequisiti: Node.js 18+, npm/yarn. Nessun server backend necessario.​
 *  (dark variants, hover states).​  
 * Hero V3: Dark mesh gradient con glow links e scroll fluido.
 
+<div>
+<img src="V3.png">
+</div>
+
 ## **Changelog**
 
 * V3 (23/03/26): Dark theme, mesh gradients, glow shadows → \+4pt perf.​  
